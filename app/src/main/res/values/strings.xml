@@ -13,4 +13,12 @@
     <string name="menu_clients">Clients</string>
     <string name="menu_careers">Careers</string>
     <string name="menu_contact_us">Contact us</string>
+
+    <string name="works_list">
+        <b>Lead Generation\n
+            Telemarketing\n
+            Remote Office\n
+            Customer Service
+        </b>
+    </string>
 </resources>

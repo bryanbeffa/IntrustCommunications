@@ -6,19 +6,21 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    tools:layout_editor_absoluteY="56dp"
     tools:showIn="@layout/app_bar_main">
 
     <LinearLayout
-        android:layout_width="370dp"
-        android:layout_height="622dp"
+        android:layout_width="match_parent"
+        android:layout_height="654dp"
         android:layout_marginTop="24dp"
         android:layout_marginBottom="16dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:baselineAligned="false"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="77dp"
+            android:layout_height="31dp"
+            android:orientation="horizontal" />
 
         <TextView
             android:id="@+id/outsourceTitle"
@@ -36,7 +38,7 @@
 
         <TextView
             android:id="@+id/secondTitle"
-            android:layout_width="331dp"
+            android:layout_width="wrap_content"
             android:layout_height="79dp"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
@@ -50,8 +52,8 @@
 
         <TextView
             android:id="@+id/firsPara"
-            android:layout_width="333dp"
-            android:layout_height="196dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="16dp"
@@ -64,34 +66,74 @@
             android:textSize="@dimen/normal_text" />
 
         <TextView
-            android:id="@+id/firsPara4"
-            android:layout_width="match_parent"
-            android:layout_height="196dp"
+            android:id="@+id/secondPara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:text="It is in the interest of all business owners to maintain a strong relationship
-            with their customers. For many this is a challenge due to time and budget.
-            At Intrust Communication we become an extension of your company."
+            android:text="We provide the telesales support that is vital to your business growth and development. \nThe areas that we specialise in are:"
             android:textColor="@color/normalTextColor"
             android:textSize="@dimen/normal_text" />
 
         <TextView
-            android:id="@+id/firsPara5"
+            android:id="@+id/thirdPara"
             android:layout_width="match_parent"
-            android:layout_height="196dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:lineHeight="28dp"
+            android:textAlignment="center"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:text="@string/works_list"
+            android:textColor="@color/normalTextColor"
+            android:textSize="@dimen/normal_text" />
+
+        <TextView
+            android:id="@+id/servicesTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
-            android:text="It is in the interest of all business owners to maintain a strong relationship
+            android:text="Our Services"
+            android:textAlignment="center"
+            android:textColor="@color/firstTitleColor"
+            android:textSize="@dimen/first_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/firsPara8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:text="It is in the interest of all business owners to maintain a strong relationship
             with their customers. For many this is a challenge due to time and budget.
             At Intrust Communication we become an extension of your company."
-            android:textColor="@color/normalTextColor"
-            android:textSize="@dimen/normal_text" />
+                android:textColor="@color/normalTextColor"
+                android:textSize="@dimen/normal_text" />
+        </LinearLayout>
 
     </LinearLayout>
 
