@@ -9,28 +9,29 @@
             android:icon="@drawable/ic_menu_home"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_about_us"
             android:icon="@drawable/ic_menu_about_us"
             android:title="@string/menu_about_us" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:id="@+id/nav_services"
+            android:icon="@drawable/ic_menu_services"
             android:title="@string/menu_services" />
         <item
-            android:id="@+id/nav_tools"
-            android:icon="@drawable/ic_menu_manage"
+            android:id="@+id/nav_clients"
+            android:icon="@drawable/ic_menu_clients"
             android:title="@string/menu_clients" />
+
+        <item
+            android:id="@+id/nav_career"
+            android:icon="@drawable/career"
+            android:title="@string/menu_careers" />
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/menu_careers" />
-            <item
                 android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_menu_contact_us"
                 android:title="@string/menu_contact_us" />
         </menu>
     </item>
