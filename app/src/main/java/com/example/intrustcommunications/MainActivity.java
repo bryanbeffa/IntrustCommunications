@@ -20,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.Menu;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -45,6 +46,19 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        //set all text
+        setTextViewsTexts();
+
+
+    }
+
+    private void setTextViewsTexts(){
+        //outsource title
+        ((TextView) findViewById(R.id.firsPara)).setText("It is in the interest of all " +
+                "business owners to maintain a strong relationship with their customers. " +
+                "For many this is a challenge due to time and budget. At Intrust Communication we " +
+                "become an extension of your company.");
     }
 
     @Override
