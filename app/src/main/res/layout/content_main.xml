@@ -10,17 +10,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="654dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="600dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:baselineAligned="false"
         android:orientation="vertical">
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="77dp"
-            android:layout_height="31dp"
-            android:orientation="horizontal" />
 
         <TextView
             android:id="@+id/outsourceTitle"
@@ -28,7 +22,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:text="Outsource Contact Centre"
@@ -83,13 +76,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:lineHeight="28dp"
-            android:textAlignment="center"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
+            android:lineHeight="28dp"
             android:text="@string/works_list"
+            android:textAlignment="center"
             android:textColor="@color/normalTextColor"
             android:textSize="@dimen/normal_text" />
 
@@ -102,25 +95,28 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
+            android:layout_marginBottom="16dp"
             android:text="Our Services"
             android:textAlignment="center"
             android:textColor="@color/firstTitleColor"
             android:textSize="@dimen/first_title" />
 
+        <!-- INBOUND & OUTBOUND TELESALES -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/bg_color"
             android:orientation="vertical">
 
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/inboundImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/firsPara8"
+                android:id="@+id/inboundTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
@@ -128,12 +124,206 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
-                android:text="It is in the interest of all business owners to maintain a strong relationship
-            with their customers. For many this is a challenge due to time and budget.
-            At Intrust Communication we become an extension of your company."
+                android:layout_marginBottom="16dp"
+                android:text="Inbound and Outbound telesales"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/second_title" />
+
+            <TextView
+                android:id="@+id/inboundPara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="We pride ourselves on a very high conversion rate with low churn and
+                strive for the highest quality at all times and the best experience for the Customer."
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/normal_text" />
+
+            <Button
+                android:id="@+id/inboundKnowMore"
+                android:layout_width="295dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/background_light"
+                android:text="Know More"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/bg_color" />
+
+        </LinearLayout>
+        <!-- end INBOUND & OUTBOUND TELESALES-->
+
+        <!-- BACK OFFICE & FULFILMENT SERVICE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_light"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/backOfficeImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/backOfficeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="Back Office And Fulfilment Service"
+                android:textAlignment="center"
+                android:textColor="@color/normalTextColor"
+                android:textSize="@dimen/second_title" />
+
+            <TextView
+                android:id="@+id/backOfficePara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="Take those painful time consuming admin tasks away and use Intrust Communications. We provide full Back Office and Fulfillment duties."
+                android:textAlignment="center"
                 android:textColor="@color/normalTextColor"
                 android:textSize="@dimen/normal_text" />
+
+            <Button
+                android:id="@+id/backOfficeKnowMore"
+                android:layout_width="295dp"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color"
+                android:text="Know More"
+                android:layout_marginBottom="16dp"
+                android:textColor="@android:color/background_light" />
+
+
         </LinearLayout>
+        <!-- end BACK OFFICE & FULFILMENT SERVICE -->
+
+        <!-- CUSTOMER RETENTION & WIN-BACK -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/customerRetentionImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/customerRetentionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="Customer Retention And Win - Back"
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/second_title" />
+
+            <TextView
+                android:id="@+id/customerRetentionPara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="Communications with customers who are unhappy or who have already been lost can help pinpoint opportunities to improve product and service delivery."
+                android:textAlignment="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/normal_text" />
+
+            <Button
+                android:id="@+id/customerRetentionKnowMore"
+                android:layout_width="295dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/background_light"
+                android:text="Know More"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/bg_color" />
+
+        </LinearLayout>
+        <!-- end CUSTOMER RETENTION & WIN-BACK -->
+
+
+        <!-- CUSTOMER SERVICES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_light"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/customerServicesImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/customerServicesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="Customer Services"
+                android:textAlignment="center"
+                android:textColor="@color/normalTextColor"
+                android:textSize="@dimen/second_title" />
+
+            <TextView
+                android:id="@+id/customerServicesPara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="We simply believe that the customer is always right and every single interaction between Intrust and a customer will be treated with the utmost respect."
+                android:textAlignment="center"
+                android:textColor="@color/normalTextColor"
+                android:textSize="@dimen/normal_text" />
+
+            <Button
+                android:id="@+id/customerServiceKnowMore"
+                android:layout_width="295dp"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color"
+                android:text="Know More"
+                android:layout_marginBottom="16dp"
+                android:textColor="@android:color/background_light" />
+
+        </LinearLayout>
+
+        <!-- end CUSTOMER SERVICES -->
 
     </LinearLayout>
 
