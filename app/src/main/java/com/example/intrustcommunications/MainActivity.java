@@ -20,6 +20,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 import android.widget.TextView;
@@ -50,11 +52,6 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
-
-        //set all text
-        setTextViewsTexts();
-
-
     }
 
     private void setTextViewsTexts(){
@@ -113,8 +110,11 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_career) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_contact_us) {
 
+        } else if (id == R.id.nav_map) {
+            Intent map = new Intent(MainActivity.this, MapsActivity.class);
+            startActivity(map);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

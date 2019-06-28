@@ -25,12 +25,18 @@
             android:id="@+id/nav_career"
             android:icon="@drawable/career"
             android:title="@string/menu_careers" />
+
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/map"
+            android:title="@string/menu_map" />
+
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_contact_us"
                 android:icon="@drawable/ic_menu_contact_us"
                 android:title="@string/menu_contact_us" />
         </menu>
