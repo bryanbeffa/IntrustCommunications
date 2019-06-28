@@ -22,6 +22,12 @@
             Customer Service
         </b>
     </string>
+    <string name="client_benefits_list">
+        <li>Significant reduction in costs as amount of telephone support calls is low</li>\n\n
+        <li>Ability to handle more than one customer whilst at all times respecting Data Protection and Compliance</li>\n\n
+        <li>We can provide 24 hour Live Web Chat support services</li>\n\n
+        <li>Provide real-time contact solutions that will increase conversions and improve customer satisfaction levels</li>
+    </string>
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="title_activity_maps">Map</string>
 
