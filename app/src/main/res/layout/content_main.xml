@@ -77,21 +77,86 @@
             android:textColor="@color/normalTextColor"
             android:textSize="@dimen/normal_text" />
 
+        <!-- list -->
+        <TextView
+            android:id="@+id/leadGeneration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:lineHeight="28dp"
+            android:text="Lead Generation"
+            android:textColor="@color/normalTextColor"
+            android:textSize="@dimen/normal_text"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/teleMarketing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:lineHeight="28dp"
+            android:text="Telemarketing"
+            android:textColor="@color/normalTextColor"
+            android:textSize="@dimen/normal_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/remoteOffice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:lineHeight="28dp"
+            android:text="Remote Office"
+            android:textColor="@color/normalTextColor"
+            android:textSize="@dimen/normal_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/customerService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:lineHeight="28dp"
+            android:text="Customer Service"
+            android:textColor="@color/normalTextColor"
+            android:textSize="@dimen/normal_text"
+            android:textStyle="bold" />
+
+        <!-- End list -->
+
         <TextView
             android:id="@+id/thirdPara"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginLeft="36dp"
             android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
             android:layout_marginRight="24dp"
             android:lineHeight="28dp"
-            android:text="@string/works_list"
-            android:textAlignment="center"
+            android:text="Working with you to understand your company’s needs and to allow us to deliver your message in your words."
             android:textColor="@color/normalTextColor"
             android:textSize="@dimen/normal_text" />
 
+        <VideoView
+            android:id="@+id/michVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <TextView
             android:id="@+id/servicesTitle"
@@ -105,8 +170,9 @@
             android:layout_marginBottom="16dp"
             android:text="Our Services"
             android:textAlignment="center"
-            android:textColor="@color/firstTitleColor"
+            android:textColor="@color/bg_color"
             android:textSize="@dimen/first_title" />
+        <!-- android:background="@drawable/back" -->
 
         <!-- INBOUND & OUTBOUND TELESALES -->
         <LinearLayout
@@ -124,8 +190,8 @@
                     android:id="@+id/inboundImage"
                     android:layout_width="140dp"
                     android:layout_height="150dp"
-                    android:layout_marginTop="16dp"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
                     android:src="@drawable/headsets"
                     tools:srcCompat="@tools:sample/avatars" />
 
@@ -197,8 +263,8 @@
                     android:id="@+id/backOfficeImage"
                     android:layout_width="140dp"
                     android:layout_height="150dp"
-                    android:layout_marginTop="16dp"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
                     android:src="@drawable/briefcase"
                     tools:srcCompat="@tools:sample/avatars" />
 
@@ -341,9 +407,9 @@
                 <ImageView
                     android:id="@+id/customerServicesImage"
                     android:layout_width="140dp"
-                    android:layout_marginTop="16dp"
                     android:layout_height="150dp"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
                     android:src="@drawable/user"
                     tools:srcCompat="@tools:sample/avatars" />
 
@@ -414,8 +480,8 @@
                     android:id="@+id/webChatImage"
                     android:layout_width="140dp"
                     android:layout_height="150dp"
-                    android:layout_marginTop="16dp"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
                     android:src="@drawable/chat"
                     tools:srcCompat="@tools:sample/avatars" />
 
@@ -487,8 +553,8 @@
                     android:id="@+id/leadGenerationImage"
                     android:layout_width="140dp"
                     android:layout_height="150dp"
-                    android:layout_marginTop="16dp"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
                     android:src="@drawable/lead"
                     tools:srcCompat="@tools:sample/avatars" />
 

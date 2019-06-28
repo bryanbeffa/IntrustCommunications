@@ -1,6 +1,7 @@
 package com.example.intrustcommunications;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -25,6 +26,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity
             }
         });*/
 
+        //setVideoSource();
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -52,6 +55,13 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    private void setVideoSource(){
+        Uri uri = Uri.parse("https://www.youtube.com/watch?v=FLB-XkDwfhw");
+        VideoView simpleVideoView = (VideoView) findViewById(R.id.michVideo); // initiate a video view
+        simpleVideoView.setVideoURI(uri);
+        simpleVideoView.start();
     }
 
     private void setTextViewsTexts(){
