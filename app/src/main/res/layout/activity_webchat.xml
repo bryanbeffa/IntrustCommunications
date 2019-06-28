@@ -15,7 +15,7 @@
 
         <!-- First part -->
         <ImageView
-            android:id="@+id/intrustBg"
+            android:id="@+id/webchatBg"
             android:layout_width="match_parent"
             android:layout_height="292dp"
             android:src="@drawable/webchat"

@@ -13,30 +13,21 @@
         android:baselineAligned="false"
         android:orientation="vertical">
 
-        <!-- About us title-->
+        <!-- Start section -->
         <ImageView
-            android:id="@+id/aboutBg"
+            android:id="@+id/customerBg"
             android:layout_width="match_parent"
             android:layout_height="292dp"
-            android:src="@drawable/about_us_bg"
+            android:src="@drawable/customer_bg"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView
             android:id="@+id/aboutUsTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="About Us"
+            android:text="Customer Retention And Win-back"
             android:textAlignment="center"
             android:textSize="@dimen/first_title" />
-
-        <TextView
-            android:id="@+id/secondTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Who we are"
-            android:textAlignment="center"
-            android:textColor="@color/secondTitleColor"
-            android:textSize="@dimen/second_title" />
 
         <TextView
             android:id="@+id/firstPara"
@@ -46,10 +37,12 @@
             android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Intrust Communications are an Outsource Contact Centre Located in Cork, Ireland.  Our goal is to achieve maximum return on Investment for our clients. Intrust Communications want to be a Partner not a Vendor."
+            android:text="All Businesses need to increase sales but also it is essential that your present customers are kept happy and are maintained by your business. It is no use taking on 100 customers and then losing 50! Increase Your Installed Customer base with a Partner."
             android:textColor="@color/normalTextColor"
-            android:textSize="@dimen/normal_text" />
+            android:textSize="@dimen/normal_text"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/secondPara"
@@ -60,7 +53,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Intrust Communicatons is owned and managed by Mick Hull. Mick has worked as a senior manager in the Contact Center Industry and is an expert in both the Customer Service and Sales Industry. Some of the Call Centres he has managed have had up to 500 agents with Customer Services, Sales and Technical Support in Multiple Languages."
+            android:text="Let Intrust Communications work with you as a Partner to ensure your customers are kept happy and within your Business."
             android:textColor="@color/normalTextColor"
             android:textSize="@dimen/normal_text" />
 
@@ -73,56 +66,34 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            android:text="The goal is to bring the the experience and knowledge of the big call centres to the SME  sector.  Traditionally this would not be a service for a smaller client. With Intrust Communications you can avail of this service to help grow your business."
+            android:text="We are experts in helping business’s win customers back and also keeping them within the business by re-contracting etc,  All of this can be done in a cost effective way."
             android:textColor="@color/normalTextColor"
             android:textSize="@dimen/normal_text" />
 
-        <!-- mick Hull section -->
         <TextView
-            android:id="@+id/mickTitle"
+            android:id="@+id/fourthPara"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="About Mick Hull"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="We are experts in helping business’s win customers back and also keeping them within the business by re-contracting etc,  All of this can be done in a cost effective way."
+            android:textColor="@color/normalTextColor"
+            android:textSize="@dimen/normal_text" />
+
+        <TextView
+            android:id="@+id/secondTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact Intrust today, for a no obligation consultation"
             android:textAlignment="center"
             android:textColor="@color/secondTitleColor"
             android:textSize="@dimen/second_title" />
 
         <TextView
-            android:id="@+id/firstMickPara"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:text="I am keen runner and have completed 48 marathons to date with a personal best of 3 Hours 27 Minutes. The biggest achievement is to have completed the Comrades Marathon in South Africa. This is a 54 mile marathon."
-            android:textColor="@color/normalTextColor"
-            android:textSize="@dimen/normal_text" />
-
-        <TextView
-            android:id="@+id/secondMickPara"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:text="Sport is a big part of my life. I enjoy participating in Cricket and football but I also coach in both sports."
-            android:textColor="@color/normalTextColor"
-            android:textSize="@dimen/normal_text" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="377dp"
-            android:src="@drawable/mick"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
-
-
-        <TextView
-            android:id="@+id/thirdMickPara"
+            android:id="@+id/fifthPara"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -131,7 +102,21 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:text="I am also a part time Voluntary worker for a Cork Based Charity, helping to integrate people into the workplace and offering practical advice."
+            android:textStyle="bold"
+            android:text="Intrust operate as follows:"
+            android:textColor="@color/normalTextColor"
+            android:textSize="@dimen/normal_text" />
+
+        <TextView
+            android:id="@+id/clientList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/intrust_operate_as_follow_list"
             android:textColor="@color/normalTextColor"
             android:textSize="@dimen/normal_text" />
 
@@ -139,10 +124,9 @@
             android:id="@+id/intrustImage"
             android:layout_width="match_parent"
             android:layout_height="78dp"
+            android:layout_marginBottom="32dp"
             android:src="@drawable/intrust_logo"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
-            android:layout_marginBottom="32dp"/>
-
-
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        <!-- end section -->
     </LinearLayout>
 </ScrollView>
