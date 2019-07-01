@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,24 +19,25 @@
             android:id="@+id/customerBg"
             android:layout_width="match_parent"
             android:layout_height="260dp"
+            android:layout_marginBottom="24dp"
             android:src="@drawable/customer_bg"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
-            android:layout_marginBottom="24dp"/>
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView
             android:id="@+id/aboutUsTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/customerBg"
+            android:layout_marginBottom="24dp"
             android:text="Customer Retention And Win-back"
             android:textAlignment="center"
-            android:layout_marginBottom="24dp"
-            android:textSize="@dimen/first_title"
-            android:layout_below="@+id/customerBg"/>
+            android:textSize="@dimen/first_title" />
 
         <TextView
             android:id="@+id/firstPara"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/aboutUsTitle"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
@@ -44,13 +46,13 @@
             android:text="All Businesses need to increase sales but also it is essential that your present customers are kept happy and are maintained by your business. It is no use taking on 100 customers and then losing 50! Increase Your Installed Customer base with a Partner."
             android:textColor="@color/normalTextColor"
             android:textSize="@dimen/normal_text"
-            android:textStyle="bold"
-            android:layout_below="@+id/aboutUsTitle"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/secondPara"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/firstPara"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
@@ -58,13 +60,13 @@
             android:layout_marginBottom="24dp"
             android:text="Let Intrust Communications work with you as a Partner to ensure your customers are kept happy and within your Business."
             android:textColor="@color/normalTextColor"
-            android:textSize="@dimen/normal_text"
-            android:layout_below="@id/firstPara"/>
+            android:textSize="@dimen/normal_text" />
 
         <TextView
             android:id="@+id/thirdPara"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/secondPara"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
@@ -72,13 +74,14 @@
             android:layout_marginBottom="24dp"
             android:text="We are experts in helping business’s win customers back and also keeping them within the business by re-contracting etc,  All of this can be done in a cost effective way."
             android:textColor="@color/normalTextColor"
-            android:textSize="@dimen/normal_text"
-            android:layout_below="@id/secondPara"/>
+            android:textSize="@dimen/normal_text" />
 
         <TextView
             android:id="@+id/fourthPara"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/thirdPara"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
@@ -86,57 +89,60 @@
             android:layout_marginBottom="24dp"
             android:text="We are experts in helping business’s win customers back and also keeping them within the business by re-contracting etc,  All of this can be done in a cost effective way."
             android:textColor="@color/normalTextColor"
-            android:textSize="@dimen/normal_text"
-            android:layout_below="@id/thirdPara"/>
+            android:textSize="@dimen/normal_text" />
 
         <TextView
             android:id="@+id/secondTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/fourthPara"
+            android:layout_marginBottom="24dp"
             android:text="Contact Intrust today, for a no obligation consultation"
             android:textAlignment="center"
             android:textColor="@color/secondTitleColor"
-            android:textSize="@dimen/second_title"
-            android:layout_marginBottom="24dp"
-            android:layout_below="@id/fourthPara"/>
+            android:textSize="@dimen/second_title" />
 
         <TextView
             android:id="@+id/fifthPara"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/secondTitle"
+            android:layout_centerHorizontal="true"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="24dp"
-            android:textStyle="bold"
+            android:background="@drawable/bottom_stroke"
             android:text="Intrust operate as follows:"
             android:textColor="@color/normalTextColor"
             android:textSize="@dimen/normal_text"
-            android:layout_below="@id/secondTitle"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/clientList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/fifthPara"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginBottom="24dp"
             android:text="@string/intrust_operate_as_follow_list"
             android:textColor="@color/normalTextColor"
-            android:textSize="@dimen/normal_text"
-            android:layout_below="@id/fifthPara"/>
+            android:textSize="@dimen/normal_text" />
 
         <ImageView
             android:id="@+id/intrustImage"
             android:layout_width="match_parent"
-            android:layout_height="78dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/clientList"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
             android:layout_marginBottom="24dp"
             android:src="@drawable/intrust_logo"
-            tools:srcCompat="@tools:sample/backgrounds/scenic"
-            android:layout_below="@id/clientList"/>
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
         <!-- end section -->
     </RelativeLayout>
 </ScrollView>
