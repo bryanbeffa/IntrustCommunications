@@ -4,11 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
-import android.os.Handler;
-import android.view.View;
 
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -21,10 +16,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
+import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -46,7 +40,8 @@ public class MainActivity extends AppCompatActivity
             }
         });*/
 
-        //setVideoSource();
+        //set the video source
+        setVideoView();
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -57,14 +52,25 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
     }
 
-    private void setVideoSource(){
-        Uri uri = Uri.parse("https://www.youtube.com/watch?v=FLB-XkDwfhw");
-        VideoView simpleVideoView = (VideoView) findViewById(R.id.michVideo); // initiate a video view
-        simpleVideoView.setVideoURI(uri);
-        simpleVideoView.start();
+    private void setVideoView() {
+
+        //find element
+        VideoView video = (VideoView) findViewById(R.id.mickVideo);
+
+        //create controller
+        MediaController controller = new MediaController(MainActivity.this);
+
+        //set video source
+        String path = "android.resource://com.example.intrustcommunications/" + R.raw.prova;
+        Uri uri = Uri.parse(path);
+        video.setVideoURI(uri);
+
+        //set media controller
+        video.setMediaController(controller);
+        controller.setAnchorView(video);
     }
 
-    private void setTextViewsTexts(){
+    private void setTextViewsTexts() {
         //outsource title
         ((TextView) findViewById(R.id.firsPara)).setText("It is in the interest of all " +
                 "business owners to maintain a strong relationship with their customers. " +
