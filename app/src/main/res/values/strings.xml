@@ -16,11 +16,10 @@
     <string name="menu_map">Where we are</string>
 
     <string name="works_list">
-        <b>Lead Generation\n
-            Telemarketing\n
-            Remote Office\n
-            Customer Service
-        </b>
+        <li>Lead Generation</li>\n
+        <li>Telemarketing</li>\n
+        <li>Remote Office</li>\n
+        <li>Customer Service</li>
     </string>
     <string name="client_benefits_list">
         <li>Significant reduction in costs as amount of telephone support calls is low</li>\n\n

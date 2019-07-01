@@ -6,5 +6,9 @@
     <color name="normalTextColor">#000000</color>
     <color name="firstTitleColor">@color/cardview_dark_background</color>
     <color name="secondTitleColor">@android:color/darker_gray</color>
-    <color name="bg_color">#00ccff</color>
+    <color name="details_color">#00ccff</color>
+    <color name="bg_color">@android:color/white</color>
+    <color name="cit_bg_color">@android:color/background_dark</color>
+    <color name="cit_txt_color">@android:color/darker_gray</color>
+    <color name="cit_title_color">@android:color/white</color>
 </resources>
