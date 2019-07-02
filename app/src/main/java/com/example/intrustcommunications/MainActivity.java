@@ -186,6 +186,10 @@ public class MainActivity extends AppCompatActivity
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new BackOfficeFragment());
             ft.commit();
+        } else if (id == R.id.customerRetentionKnowMore) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flMain, new CustomerRetentionFragment());
+            ft.commit();
         }
     }
 }
