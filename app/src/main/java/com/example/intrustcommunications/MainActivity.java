@@ -146,9 +146,9 @@ public class MainActivity extends AppCompatActivity
             ft.replace(R.id.flMain, new HomeFragment());
             ft.commit();
         } else if (id == R.id.nav_about_us) {
-            //FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            //ft.replace(R.id.flMain, new AboutUsFragment());
-            //ft.commit();
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flMain, new AboutUsFragment());
+            ft.commit();
         } else if (id == R.id.nav_services) {
 
         } else if (id == R.id.nav_clients) {
