@@ -190,6 +190,10 @@ public class MainActivity extends AppCompatActivity
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new CustomerRetentionFragment());
             ft.commit();
+        } else if (id == R.id.leadGenerationKnowMore) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flMain, new LeadGenerationFragment());
+            ft.commit();
         }
     }
 }

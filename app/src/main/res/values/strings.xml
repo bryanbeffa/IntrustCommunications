@@ -52,10 +52,19 @@
         <li>Experts in this Industry and will work with you as our client to improve the overall Customer Journey</li>
     </string>
 
+    <string name="intrust_operate_as_follow_lead_page">
+        <li>Providing high quality, fully confirmed leads to our clients.</li>\n\n
+        <li>Working with our clients and have fully synced calendars where appropriate.</li>\n\n
+        <li>A text or phone call will be made 24 hours before the appointment (working day) to confirm everything is still in order.</li>\n\n
+        <li>Subject to client agreement we can make a follow up call after the appointment to measure the success and provide comprehensive feedback to our client.</li>
+    </string>
+
     <string name="list_back_office_page">
         <li>Postage of Letters</li>\n\n
         <li>Shipping of packages from merchandise material (Mugs, Pens) through to bigger packages such as crates of wine etc.</li>
     </string>
+
+    <string name="lead_generation_last_para">We will work with you to set and agree a plan of action that will ensure your sales Increase and your sales pipeline is maintained.  An agreed criteria to Generate Leads and appointments for you that will ensure you get a return on your investment.<b> All of this can be done in a cost effective way.</b></string>
 
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="title_activity_maps">Map</string>

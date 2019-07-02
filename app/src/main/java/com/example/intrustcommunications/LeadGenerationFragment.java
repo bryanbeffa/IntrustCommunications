@@ -1,0 +1,31 @@
+package com.example.intrustcommunications;
+
+
+import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class LeadGenerationFragment extends Fragment {
+
+
+    public LeadGenerationFragment() {
+        // Required empty public constructor
+    }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_lead_generation, container, false);
+    }
+
+}

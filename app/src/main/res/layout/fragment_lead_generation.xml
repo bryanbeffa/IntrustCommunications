@@ -2,9 +2,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".WebChatFragment">
-
+    android:layout_height="match_parent"
+    tools:context=".LeadGenerationFragment">
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,46 +15,57 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="24dp"
             android:baselineAligned="false"
             android:orientation="vertical">
 
-            <!-- First part -->
+            <!-- First Part -->
             <RelativeLayout
-                android:id="@+id/firstPartLayout"
+                android:id="@+id/firstPart"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
-                android:baselineAligned="false"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/webchatBg"
+                    android:id="@+id/leadBg"
                     android:layout_width="match_parent"
                     android:layout_height="292dp"
                     android:layout_marginBottom="24dp"
                     android:src="@drawable/webchat" />
 
                 <TextView
-                    android:id="@+id/webchatTitle"
+                    android:id="@+id/leadTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/webchatBg"
+                    android:layout_below="@+id/leadBg"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="24dp"
-                    android:text="Web Chat"
+                    android:text="Lead Generation"
                     android:textAlignment="center"
                     android:textSize="@dimen/first_title" />
 
                 <TextView
-                    android:id="@+id/secondTitle"
+                    android:id="@+id/leadSecondTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/webchatTitle"
+                    android:layout_below="@id/leadTitle"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="24dp"
-                    android:text="Intrust Communications are an Outsourced Contact Centre Based in Cork, Ireland"
+                    android:text="Are you having challenges trying to generate sales?"
+                    android:textAlignment="center"
+                    android:textColor="@color/secondTitleColor"
+                    android:textSize="@dimen/second_title" />
+
+                <TextView
+                    android:id="@+id/leadThirdTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/leadSecondTitle"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="Increase Your Sales and Generate Leads with a Partner."
                     android:textAlignment="center"
                     android:textColor="@color/secondTitleColor"
                     android:textSize="@dimen/second_title" />
@@ -64,11 +74,11 @@
                     android:id="@+id/firstPara"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/secondTitle"
+                    android:layout_below="@id/leadThirdTitle"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="24dp"
-                    android:text="Intrust Communications recognizes that customer contact services must provide the widest variety of possible communications channels in order to enhance and optimize the customer experience. With this in mind Intrust would consider itself an expert at  Webchat.  Intrust will align itself with the client requirements against our skill set to provide a first class Customer Experience for our mutual customers."
+                    android:text="All Business’s need to generate Sales, Leads and Appointments to maintain a healthy sales pipeline."
                     android:textColor="@color/normalTextColor"
                     android:textSize="@dimen/normal_text" />
 
@@ -80,7 +90,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="24dp"
-                    android:text="Intrust Communications recognizes that with people’s busy and hectic lifestyle sometimes web chat is the only possible form of Communication and we want to be available to answer questions from your customers as and when they arrive."
+                    android:text="Managing a sales force is a time consuming and expensive exercise.Your sales force needs a diary of appointments to generate sales. Intrust Communications work with you to generate these leads and create fully qualified appointments. This lets your sales team focus on the customer and close the deal."
                     android:textColor="@color/normalTextColor"
                     android:textSize="@dimen/normal_text" />
 
@@ -88,27 +98,35 @@
                     android:id="@+id/thirdPara"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/secondPara"
+                    android:layout_below="@id/secondPara"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="24dp"
-                    android:text="Intrust Communications are a firm supporter of Web chat activity and would assist our clients to provide and enhance a strong platform within this arena."
+                    android:text="Intrust Communications specialise in lead generation and telesales."
                     android:textColor="@color/normalTextColor"
-                    android:textSize="@dimen/normal_text"
-                    android:textStyle="italic|bold" />
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/fourthPara"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thirdPara"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="@string/lead_generation_last_para"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="@dimen/normal_text" />
 
             </RelativeLayout>
-            <!-- End First part -->
+            <!-- end first part -->
 
-            <!-- Second part-->
+            <!-- Second part -->
             <RelativeLayout
-                android:id="@+id/secondPartLayout"
+                android:id="@+id/secondPart"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/firstPartLayout"
-                android:layout_marginTop="16dp"
-                android:baselineAligned="false"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstPart">
 
                 <TextView
                     android:id="@+id/secondPartTitle"
@@ -117,17 +135,33 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="24dp"
-                    android:text="Client Benefits"
+                    android:text="Contact Intrust today, for a no obligation consultation."
                     android:textAlignment="center"
                     android:textColor="@color/secondTitleColor"
                     android:textSize="@dimen/second_title" />
+
+                <TextView
+                    android:id="@+id/secondPartSecondTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/bottom_stroke"
+                    android:text="Intrust operate as follows:"
+                    android:textAlignment="center"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="@dimen/normal_text"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/secondPartTitle"/>
 
                 <!-- List -->
                 <RelativeLayout
                     android:id="@+id/listLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@id/secondPartTitle"
+                    android:layout_below="@id/secondPartSecondTitle"
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginBottom="24dp"
@@ -143,7 +177,7 @@
                         android:layout_marginEnd="16dp"
                         android:layout_marginRight="16dp"
                         android:layout_marginBottom="24dp"
-                        android:text="@string/client_benefits_list_webchat_page"
+                        android:text="@string/intrust_operate_as_follow_lead_page"
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/normal_text" />
 
@@ -151,14 +185,13 @@
                 <!-- end list -->
 
             </RelativeLayout>
-            <!-- End second part -->
+            <!-- End second part-->
 
-            <!-- Contact us part-->
             <RelativeLayout
                 android:id="@+id/contactUsLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/secondPartLayout"
+                android:layout_below="@id/secondPart"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:baselineAligned="false"
@@ -203,6 +236,7 @@
                 android:src="@drawable/intrust_logo" />
 
         </RelativeLayout>
+
     </ScrollView>
 
 </FrameLayout>

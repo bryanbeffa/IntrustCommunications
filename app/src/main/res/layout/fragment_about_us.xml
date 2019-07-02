@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:background="@color/bg_color">
 
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="600dp"
@@ -96,7 +95,6 @@
                     android:textSize="@dimen/normal_text" />
 
             </RelativeLayout>
-
             <!-- mick Hull section -->
 
             <!-- Second part -->
@@ -145,7 +143,7 @@
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
-                    android:layout_height="377dp"
+                    android:layout_height="350dp"
                     android:layout_below="@id/secondMickPara"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="24dp"
