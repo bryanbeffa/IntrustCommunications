@@ -258,12 +258,10 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="24dp"
-                android:background="@drawable/bottom_stroke"
                 android:text="Do not esitate to contact us:"
                 android:textAlignment="center"
                 android:textColor="@color/normalTextColor"
-                android:textSize="@dimen/normal_text"
-                android:textStyle="bold" />
+                android:textSize="@dimen/normal_text"/>
 
             <Button
                 android:id="@+id/contactUsButton"
