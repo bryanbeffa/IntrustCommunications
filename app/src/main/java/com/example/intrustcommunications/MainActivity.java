@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    private void setOnClickListeners(){
+    private void setOnClickListeners() {
         //telesales know more button
         Button kmTelesales = (Button) findViewById(R.id.inboundKnowMore);
         kmTelesales.setOnClickListener(MainActivity.this);
@@ -179,6 +179,10 @@ public class MainActivity extends AppCompatActivity
             ft.replace(R.id.flMain, new WebChatFragment());
             ft.commit();
         } else if (id == R.id.backOfficeKnowMore) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flMain, new BackOfficeFragment());
+            ft.commit();
+        } else if (id == R.id.customerServiceKnowMore) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new BackOfficeFragment());
             ft.commit();
