@@ -21,18 +21,38 @@
         <li>Remote Office</li>\n
         <li>Customer Service</li>
     </string>
+
     <string name="client_benefits_list">
         <li>Significant reduction in costs as amount of telephone support calls is low</li>\n\n
         <li>Ability to handle more than one customer whilst at all times respecting Data Protection and Compliance</li>\n\n
         <li>We can provide 24 hour Live Web Chat support services</li>\n\n
         <li>Provide real-time contact solutions that will increase conversions and improve customer satisfaction levels</li>
     </string>
+
+    <string name="intrust_operate_as_follow_inbound_page">
+        <li>Providing high quality, Customer interaction for Customer Service and Sales calls</li>\n\n
+        <li>Working with our clients to have fully synced calendars where appropriate</li>\n\n
+        <li>Increase your sales and Customer Interaction today and contact <b>Intrust Communications</b></li>
+    </string>
+
     <string name="intrust_operate_as_follow_list">
         <li>We will work with you to suggest ways/incentivies to either win your customers back or maintain them within the business</li>\n\n
         <li>We will work with you to provide comprehensive feedback on why your customer felt the need to leave in the first place</li>\n\n
         <li>We will work with you to provide a plan to ensure your customers are always kept happy and maintained with your business</li>\n\n
         <li>Subject to client agreement we can make a follow up call after winback/ recontract to measure the success and provide comprehensive feedback to you</li>
     </string>
+
+    <string name="client_benefits_list_inbound_page">
+        <li>Flexibility to create a bespoke service for your business requirements</li>\n\n
+        <li>Responsive, professional and cost-effective solutions</li>\n\n
+        <li>High-quality customer interactions and a high return on Investment</li>\n\n
+        <li>Experience across a wide range of sectors, media and languages</li>\n\n
+        <li>Continuous real-time monitoring and reporting of your KPIs that generate the highest level of qualified leads</li>\n\n
+        <li>High response rates with successful up-selling and cross-selling programs</li>\n\n
+        <li>Experts in this Industry and will work with you as our client to improve the overall Customer Journey</li>
+
+    </string>
+
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="title_activity_maps">Map</string>
 
