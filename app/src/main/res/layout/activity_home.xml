@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/bg_color"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
@@ -12,7 +12,7 @@
     <FrameLayout
         android:id="@+id/flMain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -276,7 +276,7 @@
                     android:id="@+id/backOfficeKnowMore"
                     android:layout_width="295dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/backOfficeKnowMore"
+                    android:layout_below="@id/backOfficePara"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="24dp"
                     android:background="@color/details_color"

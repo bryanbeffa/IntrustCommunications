@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+
     }
 
     private void setVideoView() {
@@ -88,6 +90,27 @@ public class MainActivity extends AppCompatActivity
         //telesales know more button
         Button kmTelesales = (Button) findViewById(R.id.inboundKnowMore);
         kmTelesales.setOnClickListener(MainActivity.this);
+
+        //webchat know more button
+        Button kmWebChat = (Button) findViewById(R.id.chatWebKnowMore);
+        kmWebChat.setOnClickListener(MainActivity.this);
+
+
+        //back office know more button
+        Button kmBackOffice = (Button) findViewById(R.id.backOfficeKnowMore);
+        kmBackOffice.setOnClickListener(MainActivity.this);
+
+        //customer retention know more button
+        Button kmCustomerRetention = (Button) findViewById(R.id.customerRetentionKnowMore);
+        kmCustomerRetention.setOnClickListener(MainActivity.this);
+
+        //customer service know more button
+        Button kmCustomerService = (Button) findViewById(R.id.customerServiceKnowMore);
+        kmCustomerService.setOnClickListener(MainActivity.this);
+
+        //customer service know more button
+        Button kmLeadGeneration = (Button) findViewById(R.id.leadGenerationKnowMore);
+        kmLeadGeneration.setOnClickListener(MainActivity.this);
     }
 
     @Override
@@ -123,9 +146,9 @@ public class MainActivity extends AppCompatActivity
             ft.replace(R.id.flMain, new HomeFragment());
             ft.commit();
         } else if (id == R.id.nav_about_us) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new AboutUsFragment());
-            ft.commit();
+            //FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            //ft.replace(R.id.flMain, new AboutUsFragment());
+            //ft.commit();
         } else if (id == R.id.nav_services) {
 
         } else if (id == R.id.nav_clients) {
@@ -150,6 +173,14 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.inboundKnowMore) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new TelesalesFragment());
+            ft.commit();
+        } else if (id == R.id.chatWebKnowMore) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flMain, new WebChatFragment());
+            ft.commit();
+        } else if (id == R.id.backOfficeKnowMore) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flMain, new BackOfficeFragment());
             ft.commit();
         }
     }
