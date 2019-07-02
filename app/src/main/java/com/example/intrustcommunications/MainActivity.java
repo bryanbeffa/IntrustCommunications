@@ -1,6 +1,5 @@
 package com.example.intrustcommunications;
 
-import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -16,14 +15,16 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.MediaController;
-import android.widget.TextView;
 import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,9 @@ public class MainActivity extends AppCompatActivity
 
         //set the video source
         setVideoView();
+
+        //set listeners
+        setOnClickListeners();
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -70,14 +74,6 @@ public class MainActivity extends AppCompatActivity
         controller.setAnchorView(video);
     }
 
-    private void setTextViewsTexts() {
-        //outsource title
-        ((TextView) findViewById(R.id.firsPara)).setText("It is in the interest of all " +
-                "business owners to maintain a strong relationship with their customers. " +
-                "For many this is a challenge due to time and budget. At Intrust Communication we " +
-                "become an extension of your company.");
-    }
-
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
@@ -86,6 +82,12 @@ public class MainActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+    }
+
+    private void setOnClickListeners(){
+        //telesales know more button
+        Button kmTelesales = (Button) findViewById(R.id.inboundKnowMore);
+        kmTelesales.setOnClickListener(MainActivity.this);
     }
 
     @Override
@@ -117,9 +119,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            // Handle the camera action
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flMain, new HomeFragment());
+            ft.commit();
         } else if (id == R.id.nav_about_us) {
-
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flMain, new AboutUsFragment());
+            ft.commit();
         } else if (id == R.id.nav_services) {
 
         } else if (id == R.id.nav_clients) {
@@ -129,12 +135,22 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_contact_us) {
 
         } else if (id == R.id.nav_map) {
-            Intent map = new Intent(MainActivity.this, MapsActivity.class);
-            startActivity(map);
+
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onClick(View view) {
+        int id = view.getId();
+
+        if (id == R.id.inboundKnowMore) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flMain, new TelesalesFragment());
+            ft.commit();
+        }
     }
 }

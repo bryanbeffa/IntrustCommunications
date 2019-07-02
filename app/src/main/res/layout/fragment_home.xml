@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_color"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:context=".HomeFragment">
 
-    <FrameLayout
-        android:id="@+id/flMain"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity"
+        tools:showIn="@layout/app_bar_main">
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -276,7 +278,7 @@
                     android:id="@+id/backOfficeKnowMore"
                     android:layout_width="295dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/backOfficeKnowMore"
+                    android:layout_below="@id/backOfficePara"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="24dp"
                     android:background="@color/details_color"
@@ -551,17 +553,17 @@
                 android:id="@+id/testimonyTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/leadGenerationLayout"
-                android:layout_centerInParent="true"
                 android:layout_marginStart="24dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginRight="24dp"
                 android:layout_marginBottom="24dp"
                 android:background="@drawable/bottom_stroke"
+                android:layout_centerInParent="true"
                 android:text="Testimonies"
                 android:textColor="@color/firstTitleColor"
-                android:textSize="@dimen/first_title" />
+                android:textSize="@dimen/first_title"
+                android:layout_below="@+id/leadGenerationLayout"/>
 
             <!-- cit. adrian -->
             <RelativeLayout
@@ -698,11 +700,11 @@
                 android:id="@+id/rossPart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/nicholasPart"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="24dp"
-                android:background="@color/cit_bg_color">
+                android:background="@color/cit_bg_color"
+                android:layout_below="@id/nicholasPart">
 
                 <ImageView
                     android:id="@+id/rossImage"
@@ -759,5 +761,7 @@
             <!-- end cit. -->
 
         </RelativeLayout>
-    </FrameLayout>
-</ScrollView>
+
+    </ScrollView>
+
+</FrameLayout>
