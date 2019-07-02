@@ -21,10 +21,11 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.MediaController;
+import android.widget.ScrollView;
 import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         /*FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,11 +43,6 @@ public class MainActivity extends AppCompatActivity
             }
         });*/
 
-        //set the video source
-        setVideoView();
-
-        //set listeners
-        setOnClickListeners();
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -55,25 +52,9 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-
-    }
-
-    private void setVideoView() {
-
-        //find element
-        VideoView video = (VideoView) findViewById(R.id.mickVideo);
-
-        //create controller
-        MediaController controller = new MediaController(MainActivity.this);
-
-        //set video source
-        String path = "android.resource://com.example.intrustcommunications/" + R.raw.prova;
-        Uri uri = Uri.parse(path);
-        video.setVideoURI(uri);
-
-        //set media controller
-        video.setMediaController(controller);
-        controller.setAnchorView(video);
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.flMain, new HomeFragment());
+        ft.commit();
     }
 
     @Override
@@ -84,33 +65,6 @@ public class MainActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
-    }
-
-    private void setOnClickListeners() {
-        //telesales know more button
-        Button kmTelesales = (Button) findViewById(R.id.inboundKnowMore);
-        kmTelesales.setOnClickListener(MainActivity.this);
-
-        //webchat know more button
-        Button kmWebChat = (Button) findViewById(R.id.chatWebKnowMore);
-        kmWebChat.setOnClickListener(MainActivity.this);
-
-
-        //back office know more button
-        Button kmBackOffice = (Button) findViewById(R.id.backOfficeKnowMore);
-        kmBackOffice.setOnClickListener(MainActivity.this);
-
-        //customer retention know more button
-        Button kmCustomerRetention = (Button) findViewById(R.id.customerRetentionKnowMore);
-        kmCustomerRetention.setOnClickListener(MainActivity.this);
-
-        //customer service know more button
-        Button kmCustomerService = (Button) findViewById(R.id.customerServiceKnowMore);
-        kmCustomerService.setOnClickListener(MainActivity.this);
-
-        //customer service know more button
-        Button kmLeadGeneration = (Button) findViewById(R.id.leadGenerationKnowMore);
-        kmLeadGeneration.setOnClickListener(MainActivity.this);
     }
 
     @Override
@@ -145,6 +99,7 @@ public class MainActivity extends AppCompatActivity
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new HomeFragment());
             ft.commit();
+
         } else if (id == R.id.nav_about_us) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new AboutUsFragment());
@@ -164,36 +119,5 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    @Override
-    public void onClick(View view) {
-        int id = view.getId();
-
-        if (id == R.id.inboundKnowMore) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new TelesalesFragment());
-            ft.commit();
-        } else if (id == R.id.chatWebKnowMore) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new WebChatFragment());
-            ft.commit();
-        } else if (id == R.id.backOfficeKnowMore) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new BackOfficeFragment());
-            ft.commit();
-        } else if (id == R.id.customerServiceKnowMore) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new BackOfficeFragment());
-            ft.commit();
-        } else if (id == R.id.customerRetentionKnowMore) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new CustomerRetentionFragment());
-            ft.commit();
-        } else if (id == R.id.leadGenerationKnowMore) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new LeadGenerationFragment());
-            ft.commit();
-        }
     }
 }

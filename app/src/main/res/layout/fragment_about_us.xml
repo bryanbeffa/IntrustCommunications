@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".AboutUsFragment">
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView android:id="@+id/about_us_view"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -24,7 +24,8 @@
             <RelativeLayout
                 android:id="@id/firstPartLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants">
 
                 <ImageView
                     android:id="@+id/aboutBg"
