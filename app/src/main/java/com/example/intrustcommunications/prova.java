@@ -9,6 +9,6 @@ public class prova extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_customer_retention);
+        setContentView(R.layout.activity_back_office);
     }
 }

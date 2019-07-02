@@ -50,7 +50,11 @@
         <li>Continuous real-time monitoring and reporting of your KPIs that generate the highest level of qualified leads</li>\n\n
         <li>High response rates with successful up-selling and cross-selling programs</li>\n\n
         <li>Experts in this Industry and will work with you as our client to improve the overall Customer Journey</li>
+    </string>
 
+    <string name="list_back_office_page">
+        <li>Postage of Letters</li>\n\n
+        <li>Shipping of packages from merchandise material (Mugs, Pens) through to bigger packages such as crates of wine etc.</li>
     </string>
 
     <string name="title_activity_splash_screen">SplashScreen</string>
