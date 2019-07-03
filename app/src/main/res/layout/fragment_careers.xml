@@ -629,7 +629,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/firstPartLayout"
-                android:layout_marginBottom="24dp"
                 android:baselineAligned="false"
                 android:orientation="vertical">
 
@@ -662,7 +661,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bottom_stroke_tiny"
-                        android:text="Your Name (required)"
+                        android:text="Your Name (required):"
                         android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/normal_text" />
 
@@ -680,7 +679,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/nameEditText"
                         android:background="@drawable/bottom_stroke_tiny"
-                        android:text="Your Email (required)"
+                        android:text="Your Email (required):"
                         android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/normal_text" />
 
@@ -698,7 +697,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/emailEditText"
                         android:background="@drawable/bottom_stroke_tiny"
-                        android:text="Subject"
+                        android:text="Subject:"
                         android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/normal_text" />
 
@@ -716,7 +715,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/subjectEditText"
                         android:background="@drawable/bottom_stroke_tiny"
-                        android:text="Your Message"
+                        android:text="Your Message:"
                         android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/normal_text" />
 
@@ -726,11 +725,32 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/messageLabel"
                         android:layout_marginBottom="24dp" />
+
+                    <Button
+                        android:id="@+id/submitButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/messageEditText"
+                        android:background="@color/details_color"
+                        android:text="Submit Cv"
+                        android:textColor="@android:color/background_light" />
+
                 </RelativeLayout>
                 <!-- end form layout -->
 
             </RelativeLayout>
             <!-- End second part -->
+
+            <ImageView
+                android:id="@+id/intrustImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secondPartLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp"
+                android:src="@drawable/intrust_logo" />
 
         </RelativeLayout>
         <!-- End main container-->

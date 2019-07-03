@@ -53,6 +53,10 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
         //fourth job button
         TextView fourthJobButton = (TextView) view.findViewById(R.id.fourthJobButton);
         fourthJobButton.setOnClickListener(this);
+
+        //submit button listener
+        Button submit = (Button) view.findViewById(R.id.submitButton);
+        submit.setOnClickListener(this);
     }
 
     @Override
@@ -165,6 +169,9 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
                 //set button text
                 fourthButton.setText("+");
             }
+        } else if (id == R.id.submitButton) {
+            //add logic with validator
+            System.out.println("Submit clicked!");
         }
     }
 
