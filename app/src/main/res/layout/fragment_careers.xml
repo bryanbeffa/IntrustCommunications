@@ -661,7 +661,7 @@
                         android:id="@+id/nameLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/bottom_stroke"
+                        android:background="@drawable/bottom_stroke_tiny"
                         android:text="Your Name (required)"
                         android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/normal_text" />
@@ -679,7 +679,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/nameEditText"
-                        android:background="@drawable/bottom_stroke"
+                        android:background="@drawable/bottom_stroke_tiny"
                         android:text="Your Email (required)"
                         android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/normal_text" />
@@ -697,7 +697,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/emailEditText"
-                        android:background="@drawable/bottom_stroke"
+                        android:background="@drawable/bottom_stroke_tiny"
                         android:text="Subject"
                         android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/normal_text" />
@@ -715,7 +715,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/subjectEditText"
-                        android:background="@drawable/bottom_stroke"
+                        android:background="@drawable/bottom_stroke_tiny"
                         android:text="Your Message"
                         android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/normal_text" />
@@ -726,7 +726,6 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/messageLabel"
                         android:layout_marginBottom="24dp" />
-
                 </RelativeLayout>
                 <!-- end form layout -->
 
