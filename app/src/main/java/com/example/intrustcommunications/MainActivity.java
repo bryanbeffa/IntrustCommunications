@@ -111,7 +111,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_clients) {
 
         } else if (id == R.id.nav_career) {
-
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flMain, new CareersFragment());
+            ft.commit();
         } else if (id == R.id.nav_contact_us) {
 
         } else if (id == R.id.nav_map) {

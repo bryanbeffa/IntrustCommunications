@@ -59,6 +59,25 @@
         <li>Subject to client agreement we can make a follow up call after the appointment to measure the success and provide comprehensive feedback to our client.</li>
     </string>
 
+    <string name="first_job_description_list">
+        <li>Applicants must have an excellent Telephone manner.</li>\n\n
+        <li>Applicants must also have excellent written English and grammar as there will also be a requirement to communicate via Social Media.</li>\n\n
+        <li>Empowering our staff.</li>\n\n
+        <li>Excellent Reporting features.</li>\n\n
+        <li>Excellent System and CRM.</li>
+    </string>
+
+    <string name="first_job_requirements_list">
+        <li>Degree in Business Economics or similar an advantage.</li>\n\n
+        <li>Degree or high qualification in Analytics.</li>\n\n
+        <li>2nd Language preferred.</li>\n\n
+        <li><b>Note:</b> This is a senior position within Intrust.</li>
+    </string>
+
+    <string name="first_job_package_list">
+        <li>A attractive salary with Commission, Car Expense, laptop and phone awaits this person.</li>
+    </string>
+
     <string name="list_back_office_page">
         <li>Postage of Letters</li>\n\n
         <li>Shipping of packages from merchandise material (Mugs, Pens) through to bigger packages such as crates of wine etc.</li>
