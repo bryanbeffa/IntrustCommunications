@@ -310,6 +310,146 @@
             </RelativeLayout>
             <!-- End Second job -->
 
+            <!-- Third job -->
+            <RelativeLayout
+                android:id="@+id/thirdJobPart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/secondJobPart"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="24dp"
+                android:paddingBottom="16dp"
+                android:background="@color/details_color"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:id="@+id/thirdJobTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:text="Outbound Telesales"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/thirdJobButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@android:color/background_light"
+                    android:text="    +    "
+                    android:textColor="@color/details_color"
+                    android:textSize="@dimen/normal_text" />
+
+                <!-- Content First Job -->
+                <RelativeLayout
+                    android:id="@+id/thirdJobContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thirdJobTitle"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/background_light"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/thirdJobDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:text="Job Description"
+                        android:textAlignment="center"
+                        android:textColor="@color/secondTitleColor"
+                        android:textSize="@dimen/second_title" />
+
+                    <TextView
+                        android:id="@+id/thirdJobDescPara"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/thirdJobDesc"
+                        android:layout_marginBottom="24dp"
+                        android:text="Intrust Communications are looking for Outbound Telesales and Lead Generation experts with a proven track record in generating sales and leads through Outbound Telesales for both warm and Cold Leads."
+                        android:textColor="@color/normalTextColor"
+                        android:textSize="@dimen/normal_text" />
+
+                    <TextView
+                        android:id="@+id/thirdJobDescList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/thirdJobDescPara"
+                        android:layout_marginBottom="24dp"
+                        android:text="@string/third_job_description_list"
+                        android:textColor="@color/normalTextColor"
+                        android:textSize="@dimen/normal_text"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/thirdJobPackage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/thirdJobDescList"
+                        android:layout_marginBottom="24dp"
+                        android:text="Package"
+                        android:textAlignment="center"
+                        android:textColor="@color/secondTitleColor"
+                        android:textSize="@dimen/second_title" />
+
+                    <TextView
+                        android:id="@+id/thirdJobPackList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/thirdJobPackage"
+                        android:layout_marginBottom="24dp"
+                        android:text="@string/third_job_package_list"
+                        android:textColor="@color/normalTextColor"
+                        android:textSize="@dimen/normal_text"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/thirdJobRequirements"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/thirdJobPackList"
+                        android:layout_marginBottom="24dp"
+                        android:text="Requirements"
+                        android:textAlignment="center"
+                        android:textColor="@color/secondTitleColor"
+                        android:textSize="@dimen/second_title" />
+
+                    <TextView
+                        android:id="@+id/thirdJobReqList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/thirdJobRequirements"
+                        android:layout_marginBottom="24dp"
+                        android:text="@string/third_job_requirements_list"
+                        android:textColor="@color/normalTextColor"
+                        android:textSize="@dimen/normal_text"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/thirdJobSecondPara"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/thirdJobReqList"
+                        android:layout_marginBottom="24dp"
+                        android:text="Intrust Communications are a start up Call Center so I invite you to join us in our Journey."
+                        android:textColor="@color/normalTextColor"
+                        android:textSize="@dimen/normal_text" />
+
+                </RelativeLayout>
+                <!-- End content first job -->
+
+            </RelativeLayout>
+            <!-- End Third job -->
+
         </RelativeLayout>
 
     </ScrollView>

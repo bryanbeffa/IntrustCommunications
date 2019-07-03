@@ -44,6 +44,10 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
         //second job button
         TextView secondJobButton = (TextView) view.findViewById(R.id.secondJobButton);
         secondJobButton.setOnClickListener(this);
+
+        //third job button
+        TextView thirdJobButton = (TextView) view.findViewById(R.id.thirdJobButton);
+        thirdJobButton.setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +56,7 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
         //set layouts
         RelativeLayout firstJobLayout = (RelativeLayout) getView().findViewById(R.id.firstJobContent);
         RelativeLayout secondJobLayout = (RelativeLayout) getView().findViewById(R.id.secondJobContent);
+        RelativeLayout thirdJobLayout = (RelativeLayout) getView().findViewById(R.id.thirdJobContent);
 
         int id = view.getId();
 
@@ -65,11 +70,12 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
                 //set layouts visibility
                 firstJobLayout.setVisibility(View.VISIBLE);
                 secondJobLayout.setVisibility(View.GONE);
+                thirdJobLayout.setVisibility(View.GONE);
 
             } else {
                 firstJobLayout.setVisibility(View.GONE);
             }
-        } if (id == R.id.secondJobButton) {
+        } else if (id == R.id.secondJobButton) {
 
             //get layout visibility
             int visible = secondJobLayout.getVisibility();
@@ -79,9 +85,25 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
                 //set layouts visibility
                 firstJobLayout.setVisibility(View.GONE);
                 secondJobLayout.setVisibility(View.VISIBLE);
+                thirdJobLayout.setVisibility(View.GONE);
 
             } else {
                 secondJobLayout.setVisibility(View.GONE);
+            }
+        } else if (id == R.id.thirdJobButton) {
+
+            //get layout visibility
+            int visible = thirdJobLayout.getVisibility();
+
+            if(visible == View.GONE) {
+
+                //set layouts visibility
+                firstJobLayout.setVisibility(View.GONE);
+                secondJobLayout.setVisibility(View.GONE);
+                thirdJobLayout.setVisibility(View.VISIBLE);
+
+            } else {
+                thirdJobLayout.setVisibility(View.GONE);
             }
         }
     }

@@ -74,6 +74,14 @@
         <li>Applicants must also have excellent written English and grammar as there will also be a requirement to communicate via Social Media.</li>
     </string>
 
+    <string name="third_job_description_list">
+        <li>Contact both Consumer and Business contacts to generate high quality sales and Leads, through our automated dialler.</li>\n\n
+        <li>Applicants must have the ability to negotiate in a positive manner and influence the buying process.</li>\n\n
+        <li>Applicants must have an excellent Telephone manner.</li>\n\n
+        <li>Applicants must also have excellent written English and grammar as there will also be a requirement to communicate via Social Media.</li>
+    </string>
+
+
     <string name="first_job_requirements_list">
         <li>Degree in Business Economics or similar an advantage.</li>\n\n
         <li>Degree or high qualification in Analytics.</li>\n\n
@@ -88,12 +96,24 @@
         <li>Ability to record comprehensive notes into our CRM System.</li>
     </string>
 
+    <string name="third_job_requirements_list">
+        <li>Proven track record in the Call Centre Industry: Minimum 9 Months.</li>\n\n
+        <li>Flexible in their approach and the ability to go the extra mile.</li>\n\n
+        <li>Every interaction with our client must be a positive one.</li>\n\n
+        <li>Ability to record a 50% talk time in there daily routine.</li>
+    </string>
+
     <string name="first_job_package_list">
         <li>A attractive salary with Commission, Car Expense, laptop and phone awaits this person.</li>
     </string>
 
     <string name="second_job_package_list">
         <li>A attractive salary awaits any person who is successful in applying for this position.</li>\n\n
+        <li>Excellent promotional prospects.</li>
+    </string>
+
+    <string name="third_job_package_list">
+        <li>A attractive salary with commission structure awaits any person who is successful in applying for this position.</li>\n\n
         <li>Excellent promotional prospects.</li>
     </string>
 
