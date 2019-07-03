@@ -15,7 +15,7 @@ import android.widget.ProgressBar;
 
 public class SplashScreen extends AppCompatActivity {
 
-    private final int SPLASH_SCREEN_TIME = 0;
+    private final int SPLASH_SCREEN_TIME = 1500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
