@@ -81,12 +81,27 @@
         <li>Applicants must also have excellent written English and grammar as there will also be a requirement to communicate via Social Media.</li>
     </string>
 
+    <string name="fourth_job_description_list">
+        <li>Contact both Consumer and Business contacts to ensure the highest quality of Customer Service and excellence.</li>\n\n
+        <li>Applicants must have the ability to negotiate in a positive manner and ensure that there is a positive outcome for the end customer.</li>\n\n
+        <li>Applicants must have the ability to negotiate and where appropriate upsell to the end customer</li>\n\n
+        <li>Applicants must have an excellent Telephone manner.</li>\n\n
+        <li>Applicants must also have excellent written English and grammar as there will also be a requirement to communicate via Social Media.</li>
+    </string>
 
-    <string name="first_job_requirements_list">
+
+    <string name="first_job_education_list">
         <li>Degree in Business Economics or similar an advantage.</li>\n\n
         <li>Degree or high qualification in Analytics.</li>\n\n
         <li>2nd Language preferred.</li>\n\n
         <li><b>Note:</b> This is a senior position within Intrust.</li>
+    </string>
+
+    <string name="first_job_requirements_list">
+        <li>Proven track record in the Service Delivery field: Minimum 24 Months</li>\n\n
+        <li>Flexible in their approach and the ability to go the extra mile.</li>\n\n
+        <li>Every interaction with our client must be a positive one.</li>\n\n
+        <li>Ability to negotiate commercial requirements on behalf of Intrust Communications.</li>
     </string>
 
     <string name="second_job_requirements_list">
@@ -103,6 +118,13 @@
         <li>Ability to record a 50% talk time in there daily routine.</li>
     </string>
 
+    <string name="fourth_job_requirements_list">
+        <li>Proven track record in the Call Centre Industry: Minimum 9 Months.</li>\n\n
+        <li>Flexible in their approach and the ability to go the extra mile.</li>\n\n
+        <li>Every interaction with our client must be a positive one.</li>\n\n
+        <li>Ability to record comprehensive notes into our CRM System.</li>
+    </string>
+
     <string name="first_job_package_list">
         <li>A attractive salary with Commission, Car Expense, laptop and phone awaits this person.</li>
     </string>
@@ -113,6 +135,11 @@
     </string>
 
     <string name="third_job_package_list">
+        <li>A attractive salary with commission structure awaits any person who is successful in applying for this position.</li>\n\n
+        <li>Excellent promotional prospects.</li>
+    </string>
+
+    <string name="fourth_job_package_list">
         <li>A attractive salary with commission structure awaits any person who is successful in applying for this position.</li>\n\n
         <li>Excellent promotional prospects.</li>
     </string>

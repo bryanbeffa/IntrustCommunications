@@ -49,9 +49,9 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="24dp"
-                android:paddingBottom="16dp"
                 android:background="@color/details_color"
-                android:paddingTop="16dp">
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
 
                 <TextView
                     android:id="@+id/firstJobTitle"
@@ -65,12 +65,13 @@
 
                 <TextView
                     android:id="@+id/firstJobButton"
-                    android:layout_width="wrap_content"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="16dp"
                     android:background="@android:color/background_light"
-                    android:text="    +    "
+                    android:text="+"
+                    android:textAlignment="center"
                     android:textColor="@color/details_color"
                     android:textSize="@dimen/normal_text" />
 
@@ -81,8 +82,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/firstJobTitle"
                     android:layout_marginLeft="1dp"
-                    android:layout_marginRight="1dp"
                     android:layout_marginTop="16dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="16dp"
                     android:background="@android:color/background_light"
                     android:paddingLeft="16dp"
                     android:paddingTop="16dp"
@@ -143,7 +145,7 @@
                         android:textStyle="italic" />
 
                     <TextView
-                        android:id="@+id/firstJobRequirements"
+                        android:id="@+id/firstJobReq"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/firstJobPackList"
@@ -157,9 +159,31 @@
                         android:id="@+id/firstJobReqList"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/firstJobRequirements"
+                        android:layout_below="@+id/firstJobReq"
                         android:layout_marginBottom="24dp"
                         android:text="@string/first_job_requirements_list"
+                        android:textColor="@color/normalTextColor"
+                        android:textSize="@dimen/normal_text"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/firstJobEducation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/firstJobReqList"
+                        android:layout_marginBottom="24dp"
+                        android:text="Education"
+                        android:textAlignment="center"
+                        android:textColor="@color/secondTitleColor"
+                        android:textSize="@dimen/second_title" />
+
+                    <TextView
+                        android:id="@+id/firstJobEducationList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/firstJobEducation"
+                        android:layout_marginBottom="24dp"
+                        android:text="@string/first_job_education_list"
                         android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/normal_text"
                         android:textStyle="italic" />
@@ -168,7 +192,7 @@
                         android:id="@+id/firstJobSecondPara"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/firstJobReqList"
+                        android:layout_below="@id/firstJobEducationList"
                         android:layout_marginBottom="24dp"
                         android:text="Intrust Communications are a start up Call Center so I invite you to join us in our Journey."
                         android:textColor="@color/normalTextColor"
@@ -189,9 +213,9 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="24dp"
-                android:paddingBottom="16dp"
                 android:background="@color/details_color"
-                android:paddingTop="16dp">
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
 
                 <TextView
                     android:id="@+id/secondJobTitle"
@@ -205,12 +229,13 @@
 
                 <TextView
                     android:id="@+id/secondJobButton"
-                    android:layout_width="wrap_content"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="16dp"
                     android:background="@android:color/background_light"
-                    android:text="    +    "
+                    android:text="+"
+                    android:textAlignment="center"
                     android:textColor="@color/details_color"
                     android:textSize="@dimen/normal_text" />
 
@@ -221,8 +246,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/secondJobTitle"
                     android:layout_marginLeft="1dp"
-                    android:layout_marginRight="1dp"
                     android:layout_marginTop="16dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="16dp"
                     android:background="@android:color/background_light"
                     android:paddingLeft="16dp"
                     android:paddingTop="16dp"
@@ -319,9 +345,9 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginBottom="24dp"
-                android:paddingBottom="16dp"
                 android:background="@color/details_color"
-                android:paddingTop="16dp">
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
 
                 <TextView
                     android:id="@+id/thirdJobTitle"
@@ -335,12 +361,13 @@
 
                 <TextView
                     android:id="@+id/thirdJobButton"
-                    android:layout_width="wrap_content"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="16dp"
                     android:background="@android:color/background_light"
-                    android:text="    +    "
+                    android:text="+"
+                    android:textAlignment="center"
                     android:textColor="@color/details_color"
                     android:textSize="@dimen/normal_text" />
 
@@ -351,8 +378,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/thirdJobTitle"
                     android:layout_marginLeft="1dp"
-                    android:layout_marginRight="1dp"
                     android:layout_marginTop="16dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="16dp"
                     android:background="@android:color/background_light"
                     android:paddingLeft="16dp"
                     android:paddingTop="16dp"
@@ -449,6 +477,139 @@
 
             </RelativeLayout>
             <!-- End Third job -->
+
+            <!-- Fourth job -->
+            <RelativeLayout
+                android:id="@+id/fourthJobPart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/thirdJobPart"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="24dp"
+                android:background="@color/details_color"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/fourthJobTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="50dp"
+                    android:text="Customer Loyalty and Win-back"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/fourthJobButton"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:background="@android:color/background_light"
+                    android:text="+"
+                    android:textAlignment="center"
+                    android:textColor="@color/details_color"
+                    android:textSize="@dimen/normal_text" />
+
+                <!-- Content Second Job -->
+                <RelativeLayout
+                    android:id="@+id/fourthJobContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fourthJobTitle"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@android:color/background_light"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingRight="16dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/fourthJobDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:text="Job Description"
+                        android:textAlignment="center"
+                        android:textColor="@color/secondTitleColor"
+                        android:textSize="@dimen/second_title" />
+
+                    <TextView
+                        android:id="@+id/fourthJobDescList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fourthJobDesc"
+                        android:layout_marginBottom="24dp"
+                        android:text="@string/fourth_job_description_list"
+                        android:textColor="@color/normalTextColor"
+                        android:textSize="@dimen/normal_text"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/fourthJobPackage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fourthJobDescList"
+                        android:layout_marginBottom="24dp"
+                        android:text="Package"
+                        android:textAlignment="center"
+                        android:textColor="@color/secondTitleColor"
+                        android:textSize="@dimen/second_title" />
+
+                    <TextView
+                        android:id="@+id/fourthJobPackList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fourthJobPackage"
+                        android:layout_marginBottom="24dp"
+                        android:text="@string/fourth_job_package_list"
+                        android:textColor="@color/normalTextColor"
+                        android:textSize="@dimen/normal_text"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/fourthJobRequirements"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fourthJobPackList"
+                        android:layout_marginBottom="24dp"
+                        android:text="Requirements"
+                        android:textAlignment="center"
+                        android:textColor="@color/secondTitleColor"
+                        android:textSize="@dimen/second_title" />
+
+                    <TextView
+                        android:id="@+id/fourthJobReqList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fourthJobRequirements"
+                        android:layout_marginBottom="24dp"
+                        android:text="@string/fourth_job_requirements_list"
+                        android:textColor="@color/normalTextColor"
+                        android:textSize="@dimen/normal_text"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/fourthJobSecondPara"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/fourthJobReqList"
+                        android:layout_marginBottom="24dp"
+                        android:text="Intrust Communications are a start up Call Center so I invite you to join us in our Journey."
+                        android:textColor="@color/normalTextColor"
+                        android:textSize="@dimen/normal_text" />
+
+                </RelativeLayout>
+                <!-- End content second job -->
+
+            </RelativeLayout>
+            <!-- End Fourth job -->
 
         </RelativeLayout>
 
