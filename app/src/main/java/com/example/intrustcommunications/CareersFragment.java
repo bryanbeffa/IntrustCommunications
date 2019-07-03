@@ -40,20 +40,48 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
         //first job button
         TextView firstJobButton = (TextView) view.findViewById(R.id.firstJobButton);
         firstJobButton.setOnClickListener(this);
+
+        //second job button
+        TextView secondJobButton = (TextView) view.findViewById(R.id.secondJobButton);
+        secondJobButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
+
+        //set layouts
+        RelativeLayout firstJobLayout = (RelativeLayout) getView().findViewById(R.id.firstJobContent);
+        RelativeLayout secondJobLayout = (RelativeLayout) getView().findViewById(R.id.secondJobContent);
+
         int id = view.getId();
 
         if (id == R.id.firstJobButton) {
-            RelativeLayout relativeLayout = (RelativeLayout) getView().findViewById(R.id.firstJobContent);
 
-            int visible = relativeLayout.getVisibility();
+            //get first layout visibility
+            int visible = firstJobLayout.getVisibility();
+
             if(visible == View.GONE) {
-                relativeLayout.setVisibility(View.VISIBLE);
+
+                //set layouts visibility
+                firstJobLayout.setVisibility(View.VISIBLE);
+                secondJobLayout.setVisibility(View.GONE);
+
             } else {
-                relativeLayout.setVisibility(View.GONE);
+                firstJobLayout.setVisibility(View.GONE);
+            }
+        } if (id == R.id.secondJobButton) {
+
+            //get layout visibility
+            int visible = secondJobLayout.getVisibility();
+
+            if(visible == View.GONE) {
+
+                //set layouts visibility
+                firstJobLayout.setVisibility(View.GONE);
+                secondJobLayout.setVisibility(View.VISIBLE);
+
+            } else {
+                secondJobLayout.setVisibility(View.GONE);
             }
         }
     }
