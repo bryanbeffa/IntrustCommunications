@@ -159,7 +159,6 @@
                 android:text="Our Services"
                 android:textColor="@color/firstTitleColor"
                 android:textSize="@dimen/first_title" />
-            <!-- android:background="@drawable/back" -->
 
             <!-- INBOUND & OUTBOUND TELESALES -->
             <RelativeLayout

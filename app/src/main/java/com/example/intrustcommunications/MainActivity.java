@@ -105,7 +105,9 @@ public class MainActivity extends AppCompatActivity
             ft.replace(R.id.flMain, new AboutUsFragment());
             ft.commit();
         } else if (id == R.id.nav_services) {
-
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.flMain, new ServicesFragment());
+            ft.commit();
         } else if (id == R.id.nav_clients) {
 
         } else if (id == R.id.nav_career) {

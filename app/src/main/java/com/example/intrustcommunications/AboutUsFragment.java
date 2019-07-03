@@ -28,11 +28,6 @@ public class AboutUsFragment extends Fragment {
         // Inflate the layout for this fragment
         View aboutUsView = inflater.inflate(R.layout.fragment_about_us, container, false);
 
-        //set focus up
-        ScrollView scrollView = aboutUsView.findViewById(R.id.about_us_view);
-        scrollView.fling(0);
-        scrollView.smoothScrollTo(0, 0);
-
         return aboutUsView;
     }
 
