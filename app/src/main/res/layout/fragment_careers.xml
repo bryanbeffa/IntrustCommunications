@@ -46,8 +46,8 @@
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="24dp"
                     android:text="Careers"
-                    android:textColor="@color/firstTitleColor"
                     android:textAlignment="center"
+                    android:textColor="@color/firstTitleColor"
                     android:textSize="@dimen/first_title" />
 
                 <!-- First job -->
@@ -661,6 +661,7 @@
                         android:id="@+id/nameLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
                         android:background="@drawable/bottom_stroke_tiny"
                         android:text="Your Name (required):"
                         android:textColor="@color/normalTextColor"
@@ -672,13 +673,15 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/nameLabel"
                         android:layout_marginBottom="24dp"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/emailLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/nameEditText"
+                        android:layout_centerHorizontal="true"
                         android:background="@drawable/bottom_stroke_tiny"
                         android:text="Your Email (required):"
                         android:textColor="@color/normalTextColor"
@@ -690,13 +693,15 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/emailLabel"
                         android:layout_marginBottom="24dp"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/subjectLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/emailEditText"
+                        android:layout_centerHorizontal="true"
                         android:background="@drawable/bottom_stroke_tiny"
                         android:text="Subject:"
                         android:textColor="@color/normalTextColor"
@@ -708,13 +713,15 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/subjectLabel"
                         android:layout_marginBottom="24dp"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        android:textAlignment="center" />
 
                     <TextView
                         android:id="@+id/messageLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/subjectEditText"
+                        android:layout_centerHorizontal="true"
                         android:background="@drawable/bottom_stroke_tiny"
                         android:text="Your Message:"
                         android:textColor="@color/normalTextColor"
@@ -725,7 +732,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/messageLabel"
-                        android:layout_marginBottom="24dp" />
+                        android:layout_marginBottom="24dp"
+                        android:textAlignment="center" />
 
                     <Button
                         android:id="@+id/submitButton"
