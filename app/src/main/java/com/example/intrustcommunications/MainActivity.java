@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
-                ft.replace(R.id.flMain, new ServicesFragment());
+                ft.replace(R.id.flMain, new ServicesFragment(cfManager));
                 ft.commit();
 
                 //check if the current is the last fragment

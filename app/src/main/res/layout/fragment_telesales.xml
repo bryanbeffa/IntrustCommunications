@@ -260,8 +260,24 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/contactTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:text="Contact Us"
+                    android:textColor="@color/secondTitleColor"
+                    android:textSize="@dimen/second_title" />
+
+                <TextView
                     android:id="@+id/contactUsPara"
                     android:layout_width="wrap_content"
+                    android:layout_below="@+id/contactTitle"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="16dp"
