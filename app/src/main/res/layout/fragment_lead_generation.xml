@@ -29,7 +29,6 @@
                     android:id="@+id/leadBg"
                     android:layout_width="match_parent"
                     android:layout_height="292dp"
-                    android:layout_marginBottom="24dp"
                     android:src="@drawable/webchat" />
 
                 <TextView
@@ -42,6 +41,7 @@
                     android:layout_marginBottom="24dp"
                     android:text="Lead Generation"
                     android:textAlignment="center"
+                    android:textColor="@color/firstTitleColor"
                     android:textSize="@dimen/first_title" />
 
                 <TextView
@@ -144,6 +144,7 @@
                     android:id="@+id/secondPartSecondTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_below="@+id/secondPartTitle"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
@@ -153,8 +154,7 @@
                     android:textAlignment="center"
                     android:textColor="@color/normalTextColor"
                     android:textSize="@dimen/normal_text"
-                    android:textStyle="bold"
-                    android:layout_below="@+id/secondPartTitle"/>
+                    android:textStyle="bold" />
 
                 <!-- List -->
                 <RelativeLayout

@@ -157,6 +157,18 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_contact_us) {
 
+            //check if is the current fragment
+            if(cfManager.getCurrentFragment() != CONTACT_US_ID) {
+
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_in_right, 0);
+                ft.replace(R.id.flMain, new ContactUsFragment(cfManager));
+                ft.commit();
+
+                //check if the current is the last fragment
+                cfManager.setCurrentFragment(CONTACT_US_ID);
+            }
+
         } else if (id == R.id.nav_map) {
 
         }

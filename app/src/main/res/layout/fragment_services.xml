@@ -26,6 +26,7 @@
             android:layout_marginBottom="24dp"
             android:text="Our Services"
             android:textAlignment="center"
+            android:textColor="@color/firstTitleColor"
             android:textSize="@dimen/first_title" />
 
         <TextView
