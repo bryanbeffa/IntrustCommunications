@@ -17,6 +17,7 @@ import android.widget.Button;
  */
 public class ServicesFragment extends Fragment implements View.OnClickListener {
 
+    private final int CONTACT_US_ID = 6;
     private CurrentFragmentManager cfManager;
 
     public ServicesFragment(CurrentFragmentManager cfManager) {
@@ -60,6 +61,10 @@ public class ServicesFragment extends Fragment implements View.OnClickListener {
         //customer service know more button
         Button kmLeadGeneration = (Button) view.findViewById(R.id.leadGenerationKnowMore);
         kmLeadGeneration.setOnClickListener(this);
+
+        //contact us button
+        Button contactUsButton = (Button) view.findViewById(R.id.contactUsButton);
+        contactUsButton.setOnClickListener(this);
     }
 
     @Override
@@ -102,6 +107,19 @@ public class ServicesFragment extends Fragment implements View.OnClickListener {
             FragmentTransaction ft = getActivity(). getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new LeadGenerationFragment());
             ft.commit();
+        } else if (id == R.id.contactUsButton) {
+
+            //check if is the current fragment
+            if(cfManager.getCurrentFragment() != CONTACT_US_ID) {
+
+                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_in_right, 0);
+                ft.replace(R.id.flMain, new ContactUsFragment(cfManager));
+                ft.commit();
+
+                //check if the current is the last fragment
+                cfManager.setCurrentFragment(CONTACT_US_ID);
+            }
         }
     }
 
