@@ -657,7 +657,7 @@
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp">
 
-                    <TextView
+                    <!--<TextView
                         android:id="@+id/nameLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -685,7 +685,7 @@
                         android:background="@drawable/bottom_stroke_tiny"
                         android:text="Your Email (required):"
                         android:textColor="@color/normalTextColor"
-                        android:textSize="@dimen/normal_text" />
+                        android:textSize="@dimen/normal_text" /> -
 
                     <EditText
                         android:id="@+id/emailEditText"
@@ -694,13 +694,12 @@
                         android:layout_below="@+id/emailLabel"
                         android:layout_marginBottom="24dp"
                         android:singleLine="true"
-                        android:textAlignment="center" />
+                        android:textAlignment="center" /> -->
 
                     <TextView
                         android:id="@+id/subjectLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/emailEditText"
                         android:layout_centerHorizontal="true"
                         android:background="@drawable/bottom_stroke_tiny"
                         android:text="Subject:"

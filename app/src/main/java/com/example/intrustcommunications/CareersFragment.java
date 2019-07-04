@@ -1,6 +1,7 @@
 package com.example.intrustcommunications;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,8 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -19,6 +22,7 @@ import android.widget.TextView;
  */
 public class CareersFragment extends Fragment implements View.OnClickListener {
 
+    private final String MAIL_TO = "mick.hull@intrustcommunications.ie";
 
     public CareersFragment() {
         // Required empty public constructor
@@ -171,8 +175,37 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
             }
         } else if (id == R.id.submitButton) {
             //add logic with validator
-            System.out.println("Submit clicked!");
+            EditText subjectEdit = (EditText) getView().findViewById(R.id.subjectEditText);
+            EditText messageEdit = (EditText) getView().findViewById(R.id.messageEditText);
+
+            String subject = subjectEdit.getText().toString();
+            String message = messageEdit.getText().toString();
+
+            if(isEmailValid(subject, message)){
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("message/rfc822");
+                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{MAIL_TO});
+                i.putExtra(Intent.EXTRA_SUBJECT, subject);
+                i.putExtra(Intent.EXTRA_TEXT   , message);
+                try {
+                    startActivity(Intent.createChooser(i, "Send mail..."));
+                } catch (android.content.ActivityNotFoundException ex) {
+                }
+            }
         }
+    }
+
+    private boolean isEmailValid(String subject, String message){
+
+        subject = subject.trim();
+        message = message.trim();
+
+        if(subject != null && !subject.equals("")){
+            if(message != null && !message.equals("")){
+                return true;
+            }
+        }
+        return false;
     }
 
 }
