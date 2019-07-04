@@ -75,7 +75,7 @@ public class ServicesFragment extends Fragment implements View.OnClickListener {
 
             cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new TelesalesFragment());
+            ft.replace(R.id.flMain, new TelesalesFragment(cfManager));
             ft.commit();
         } else if (id == R.id.chatWebKnowMore) {
 
