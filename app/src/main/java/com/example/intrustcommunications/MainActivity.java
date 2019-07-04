@@ -1,5 +1,6 @@
 package com.example.intrustcommunications;
 
+import android.app.Fragment;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -15,17 +16,23 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
-import android.view.View;
-import android.widget.Button;
-import android.widget.MediaController;
-import android.widget.ScrollView;
-import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private final int HOME_ID = 0;
+    private final int ABOUT_US_ID = 1;
+    private final int SERVICES_ID = 2;
+    private final int CLIENTS_ID = 3;
+    private final int CAREERS_ID = 4;
+    private final int MAP_ID = 5;
+    private final int CONTACT_US_ID = 6;
+
+    private CurrentFragmentManager cfManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +49,14 @@ public class MainActivity extends AppCompatActivity
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
+        //set current fragment manager
+        cfManager = new CurrentFragmentManager();
+
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.flMain, new HomeFragment());
+        ft.replace(R.id.flMain, new HomeFragment(cfManager));
         ft.commit();
+
+        cfManager.setCurrentFragment(HOME_ID);
 
     }
 
@@ -87,24 +99,62 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new HomeFragment());
-            ft.commit();
 
+            //check if is the current fragment
+            if(cfManager.getCurrentFragment() != HOME_ID) {
+
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_in_right, 0);
+                HomeFragment home = new HomeFragment(cfManager);
+                ft.replace(R.id.flMain, home);
+                ft.commit();
+
+                //check if the current is the last fragment
+                cfManager.setCurrentFragment(HOME_ID);
+            }
         } else if (id == R.id.nav_about_us) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new AboutUsFragment());
-            ft.commit();
+
+            //check if is the current fragment
+            if(cfManager.getCurrentFragment() != ABOUT_US_ID) {
+
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_in_right, 0);
+                ft.replace(R.id.flMain, new AboutUsFragment());
+                ft.commit();
+
+                //check if the current is the last fragment
+                cfManager.setCurrentFragment(ABOUT_US_ID);
+            }
+
         } else if (id == R.id.nav_services) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new ServicesFragment());
-            ft.commit();
+
+            //check if is the current fragment
+            if(cfManager.getCurrentFragment() != SERVICES_ID) {
+
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_in_right, 0);
+                ft.replace(R.id.flMain, new ServicesFragment());
+                ft.commit();
+
+                //check if the current is the last fragment
+                cfManager.setCurrentFragment(SERVICES_ID);
+            }
+
         } else if (id == R.id.nav_clients) {
 
         } else if (id == R.id.nav_career) {
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new CareersFragment());
-            ft.commit();
+            //check if is the current fragment
+            if(cfManager.getCurrentFragment() != CAREERS_ID) {
+
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_in_right, 0);
+                ft.replace(R.id.flMain, new CareersFragment());
+                ft.commit();
+
+                //check if the current is the last fragment
+                cfManager.setCurrentFragment(CAREERS_ID);
+            }
+
         } else if (id == R.id.nav_contact_us) {
 
         } else if (id == R.id.nav_map) {

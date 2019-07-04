@@ -23,10 +23,11 @@ import java.util.zip.Inflater;
  */
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
+    private CurrentFragmentManager cfManager;
 
-    public HomeFragment() {
+    public HomeFragment(CurrentFragmentManager cfManager) {
         // Required empty public constructor
-
+        this.cfManager = cfManager;
     }
 
 
@@ -99,26 +100,38 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         int id = view.getId();
 
         if (id == R.id.inboundKnowMore) {
+
+            cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new TelesalesFragment());
             ft.commit();
         } else if (id == R.id.chatWebKnowMore) {
+
+            cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new WebChatFragment());
             ft.commit();
         } else if (id == R.id.backOfficeKnowMore) {
+
+            cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new BackOfficeFragment());
             ft.commit();
         } else if (id == R.id.customerServiceKnowMore) {
+
+            cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new BackOfficeFragment());
             ft.commit();
         } else if (id == R.id.customerRetentionKnowMore) {
+
+            cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new CustomerRetentionFragment());
             ft.commit();
         } else if (id == R.id.leadGenerationKnowMore) {
+
+            cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity(). getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.flMain, new LeadGenerationFragment());
             ft.commit();
