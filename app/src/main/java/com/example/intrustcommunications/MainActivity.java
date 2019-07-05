@@ -1,6 +1,7 @@
 package com.example.intrustcommunications;
 
 import android.app.Fragment;
+import android.content.ClipData;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity
     private final int CONTACT_US_ID = 6;
 
     private CurrentFragmentManager cfManager;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -89,11 +91,6 @@ public class MainActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -116,7 +113,9 @@ public class MainActivity extends AppCompatActivity
 
                 //check if the current is the last fragment
                 cfManager.setCurrentFragment(HOME_ID);
+
             }
+
         } else if (id == R.id.nav_about_us) {
 
             //check if is the current fragment
@@ -129,6 +128,7 @@ public class MainActivity extends AppCompatActivity
 
                 //check if the current is the last fragment
                 cfManager.setCurrentFragment(ABOUT_US_ID);
+
             }
 
         } else if (id == R.id.nav_services) {
@@ -143,6 +143,7 @@ public class MainActivity extends AppCompatActivity
 
                 //check if the current is the last fragment
                 cfManager.setCurrentFragment(SERVICES_ID);
+
             }
 
         } else if (id == R.id.nav_clients) {
@@ -158,6 +159,7 @@ public class MainActivity extends AppCompatActivity
 
                 //check if the current is the last fragment
                 cfManager.setCurrentFragment(CAREERS_ID);
+
             }
 
         } else if (id == R.id.nav_contact_us) {
