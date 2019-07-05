@@ -52,9 +52,13 @@ public class MainActivity extends AppCompatActivity
         //set current fragment manager
         cfManager = new CurrentFragmentManager();
 
+        //set home fragment
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.flMain, new HomeFragment(cfManager));
         ft.commit();
+
+        //set selected item menu
+        navigationView.setCheckedItem(R.id.nav_home);
 
         cfManager.setCurrentFragment(HOME_ID);
 
