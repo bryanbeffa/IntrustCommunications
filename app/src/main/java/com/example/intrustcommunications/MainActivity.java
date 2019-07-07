@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity
     private final int CAREERS_ID = 4;
     private final int MAP_ID = 5;
     private final int CONTACT_US_ID = 6;
+    private final int DASH_ID = 10;
 
     private CurrentFragmentManager cfManager;
     private NavigationView navigationView;
@@ -56,13 +57,13 @@ public class MainActivity extends AppCompatActivity
 
         //set home fragment
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.flMain, new HomeFragment(cfManager));
+        ft.replace(R.id.flMain, new DashBoardFragment(cfManager, navigationView));
         ft.commit();
 
         //set selected item menu
-        navigationView.setCheckedItem(R.id.nav_home);
+        navigationView.setCheckedItem(R.id.nav_dashboard);
 
-        cfManager.setCurrentFragment(HOME_ID);
+        cfManager.setCurrentFragment(DASH_ID);
 
     }
 
@@ -113,6 +114,21 @@ public class MainActivity extends AppCompatActivity
 
                 //check if the current is the last fragment
                 cfManager.setCurrentFragment(HOME_ID);
+
+            }
+
+        } else if (id == R.id.nav_dashboard) {
+
+            //check if is the current fragment
+            if(cfManager.getCurrentFragment() != DASH_ID) {
+
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_in_right, 0);
+                ft.replace(R.id.flMain, new DashBoardFragment(cfManager, navigationView));
+                ft.commit();
+
+                //check if the current is the last fragment
+                cfManager.setCurrentFragment(DASH_ID);
 
             }
 
