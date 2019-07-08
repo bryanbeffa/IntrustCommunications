@@ -15,6 +15,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="24dp"
             android:baselineAligned="false"
             android:orientation="vertical">
 
@@ -67,9 +68,10 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="24dp"
-                    android:textAlignment="center"
                     android:text="No 1 Waterfront Business Park, \nLittle Island, Cork"
+                    android:textAlignment="center"
                     android:textColor="@color/normalTextColor"
+                    android:textIsSelectable="true"
                     android:textSize="@dimen/normal_text" />
 
                 <TextView
@@ -94,8 +96,8 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="24dp"
-                    android:textAlignment="center"
                     android:text="00353 (21) 2355310"
+                    android:textAlignment="center"
                     android:textColor="@color/normalTextColor"
                     android:textSize="@dimen/normal_text" />
 
@@ -121,8 +123,8 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="24dp"
-                    android:textAlignment="center"
                     android:text="00353 (87) 2877025"
+                    android:textAlignment="center"
                     android:textColor="@color/normalTextColor"
                     android:textSize="@dimen/normal_text" />
 
@@ -147,10 +149,11 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:layout_marginBottom="24dp"
-                    android:textAlignment="center"
+                    android:layout_marginBottom="16dp"
                     android:text="mick.hull@intrustcommunications.ie"
+                    android:textAlignment="center"
                     android:textColor="@color/normalTextColor"
+                    android:textIsSelectable="true"
                     android:textSize="@dimen/normal_text" />
 
             </RelativeLayout>
