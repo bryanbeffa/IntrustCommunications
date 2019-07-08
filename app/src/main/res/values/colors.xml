@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#7DCACD</color>
     <color name="colorPrimaryDark">#7DCACD</color>
-    <color name="colorAccent">#7DCACD</color>
+    <color name="colorAccent">@android:color/holo_blue_dark</color>
     <color name="normalTextColor">#000000</color>
     <color name="firstTitleColor">@color/cardview_dark_background</color>
     <color name="secondTitleColor">@android:color/darker_gray</color>

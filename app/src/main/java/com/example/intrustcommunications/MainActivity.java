@@ -2,22 +2,25 @@ package com.example.intrustcommunications;
 
 import android.app.Fragment;
 import android.content.ClipData;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 
 import android.view.MenuItem;
 
+import com.google.android.gms.maps.GoogleMap;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.Menu;
@@ -33,6 +36,8 @@ public class MainActivity extends AppCompatActivity
     private final int MAP_ID = 5;
     private final int CONTACT_US_ID = 6;
     private final int DASH_ID = 10;
+
+    private final String MAIL_TO = "mick.hull@intrustcommunications.ie";
 
     private CurrentFragmentManager cfManager;
     private NavigationView navigationView;
@@ -64,7 +69,6 @@ public class MainActivity extends AppCompatActivity
         navigationView.setCheckedItem(R.id.nav_dashboard);
 
         cfManager.setCurrentFragment(DASH_ID);
-
     }
 
     @Override

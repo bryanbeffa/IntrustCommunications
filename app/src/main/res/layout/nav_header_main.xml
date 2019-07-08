@@ -44,7 +44,9 @@
             android:layout_below="@id/logoLayout"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
-            android:text="mick.hull@intrustcommunications.ie " />
+            android:text="mick.hull@intrustcommunications.ie "
+            android:textIsSelectable="true"
+            android:textColorHighlight="@android:color/holo_blue_dark"/>
 
     </RelativeLayout>
 

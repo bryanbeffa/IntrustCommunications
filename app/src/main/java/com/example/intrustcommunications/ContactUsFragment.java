@@ -39,6 +39,7 @@ public class ContactUsFragment extends Fragment implements View.OnClickListener{
         // Inflate the layout for this fragment
         View contactUs = inflater.inflate(R.layout.fragment_contact_us, container, false);
 
+        //set listeners
         setOnClickListeners(contactUs);
 
         return contactUs;
