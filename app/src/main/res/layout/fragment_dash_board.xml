@@ -13,12 +13,13 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/white">
 
             <ImageView
                 android:id="@+id/dashImage"
@@ -54,8 +55,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
+                        android:layout_width="@dimen/dash_icon"
+                        android:layout_height="@dimen/dash_icon"
                         android:src="@drawable/home" />
 
                     <TextView
@@ -88,8 +89,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
+                        android:layout_width="@dimen/dash_icon"
+                        android:layout_height="@dimen/dash_icon"
                         android:src="@drawable/about_us" />
 
                     <TextView
@@ -122,8 +123,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
+                        android:layout_width="@dimen/dash_icon"
+                        android:layout_height="@dimen/dash_icon"
                         android:src="@drawable/services" />
 
                     <TextView
@@ -156,8 +157,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
+                        android:layout_width="@dimen/dash_icon"
+                        android:layout_height="@dimen/dash_icon"
                         android:src="@drawable/clients" />
 
                     <TextView
@@ -190,8 +191,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
+                        android:layout_width="@dimen/dash_icon"
+                        android:layout_height="@dimen/dash_icon"
                         android:src="@drawable/career" />
 
                     <TextView
@@ -224,8 +225,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
+                        android:layout_width="@dimen/dash_icon"
+                        android:layout_height="@dimen/dash_icon"
                         android:src="@drawable/contact" />
 
                     <TextView
@@ -259,8 +260,8 @@
                     android:padding="16dp">
 
                     <ImageView
-                        android:layout_width="90dp"
-                        android:layout_height="90dp"
+                        android:layout_width="@dimen/dash_icon"
+                        android:layout_height="@dimen/dash_icon"
                         android:src="@drawable/map" />
 
                     <TextView

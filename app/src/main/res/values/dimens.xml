@@ -8,4 +8,5 @@
     <dimen name="first_title">36dp</dimen>
     <dimen name="second_title">26dp</dimen>
     <dimen name="normal_text">20dp</dimen>
+    <dimen name="dash_icon">70dp</dimen>
 </resources>
