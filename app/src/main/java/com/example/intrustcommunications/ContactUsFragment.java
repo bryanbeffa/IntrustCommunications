@@ -25,6 +25,7 @@ public class ContactUsFragment extends Fragment implements View.OnClickListener{
 
     private final String FIXED_NUMBER = "00353212355310";
     private final String MOBILE_NUMBER = "00353872877025";
+    private final String MAIL_TO = "mick.hull@intrustcommunications.ie";
 
     public ContactUsFragment(CurrentFragmentManager cfManager) {
         // Required empty public constructor
@@ -51,6 +52,10 @@ public class ContactUsFragment extends Fragment implements View.OnClickListener{
         //mobile label
         TextView mobileLabel = (TextView) view.findViewById(R.id.mobileLabel);
         mobileLabel.setOnClickListener(this);
+
+        //email field
+        TextView emailLabel = (TextView) view.findViewById(R.id.mailLabel);
+        emailLabel.setOnClickListener(this);
     }
 
     @Override
@@ -64,7 +69,7 @@ public class ContactUsFragment extends Fragment implements View.OnClickListener{
                     .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
 
-                            //call the mobile number
+                            //call the fixed number
                             Intent i = new Intent(Intent.ACTION_DIAL);
                             String num = "tel:" + FIXED_NUMBER;
                             i.setData(Uri.parse(num));
@@ -96,6 +101,27 @@ public class ContactUsFragment extends Fragment implements View.OnClickListener{
                             // do nothing
                         }
             }).show();
+        } else if (id == R.id.mailLabel) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setMessage("Do you want to send an email?\n")
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+
+                            //send email
+                            Intent i = new Intent(Intent.ACTION_SEND);
+                            i.setType("message/rfc822");
+                            i.putExtra(Intent.EXTRA_EMAIL  , new String[]{MAIL_TO});
+                            try {
+                                startActivity(Intent.createChooser(i, "Send mail..."));
+                            } catch (android.content.ActivityNotFoundException ex) {
+                            }
+                        }
+                    })
+                    .setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // do nothing
+                        }
+                    }).show();
         }
     }
 }
