@@ -1,77 +1,274 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DashBoardFragment">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="24dp"
-        android:paddingTop="24dp"
-        android:paddingRight="24dp"
-        android:paddingBottom="24dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
 
         <RelativeLayout
-            android:id="@+id/homeLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="4dp"
-            android:background="@color/details_color"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp">
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp">
 
             <ImageView
-                android:id="@+id/homeImage"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/headsets" />
-
-            <TextView
-                android:id="@+id/homeTitle"
+                android:id="@+id/dashImage"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/homeImage"
-                android:layout_centerHorizontal="true"
-                android:text="@string/menu_home"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/first_title" />
+                android:layout_height="70dp"
+                android:src="@drawable/intrust_logo" />
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/aboutUsLayout"
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/homeLayout"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="8dp"
-            android:background="@color/details_color"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp">
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false">
 
-            <ImageView
-                android:id="@+id/aboutUsImage"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/headsets" />
-
-            <TextView
-                android:id="@+id/aboutUsTitle"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/homeLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/aboutUsImage"
-                android:layout_centerHorizontal="true"
-                android:text="@string/menu_about_us"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/first_title" />
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="10dp">
 
-        </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-    </RelativeLayout>
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/home" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Home"
+                        android:textSize="@dimen/second_title" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/aboutUsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/about_us" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="About Us"
+                        android:textSize="@dimen/second_title" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/servicesLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/gradient"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/services" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Services"
+                        android:textSize="@dimen/second_title" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/clientsLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/gradient"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/clients" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clients"
+                        android:textSize="@dimen/second_title" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/careersLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/gradient"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/career" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Careers"
+                        android:textSize="@dimen/second_title" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/contactLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/gradient"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/contact" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact"
+                        android:textSize="@dimen/second_title" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mapLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:elevation="6dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/gradient"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:src="@drawable/map" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Where we are"
+                        android:textSize="@dimen/second_title" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+    </LinearLayout>
 
 </ScrollView>

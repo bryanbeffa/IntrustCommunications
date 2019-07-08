@@ -3,6 +3,7 @@ package com.example.intrustcommunications;
 
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -38,10 +39,33 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
     }
 
     private void setOnClickListeners(View view) {
-        //telesales know more button
-        RelativeLayout homeLayout = (RelativeLayout) view.findViewById(R.id.homeLayout);
+        //home layout
+        CardView homeLayout = (CardView) view.findViewById(R.id.homeLayout);
         homeLayout.setOnClickListener(this);
 
+        //about us layout
+        CardView aboutUsLayout = (CardView) view.findViewById(R.id.aboutUsLayout);
+        aboutUsLayout.setOnClickListener(this);
+
+        //services layout
+        CardView servicesLayout = (CardView) view.findViewById(R.id.servicesLayout);
+        servicesLayout.setOnClickListener(this);
+
+        //clients layout
+        CardView clientsLayout = (CardView) view.findViewById(R.id.clientsLayout);
+        clientsLayout.setOnClickListener(this);
+
+        //careers layout
+        CardView careersLayout = (CardView) view.findViewById(R.id.careersLayout);
+        careersLayout.setOnClickListener(this);
+
+        //contact layout
+        CardView contactLayout = (CardView) view.findViewById(R.id.contactLayout);
+        contactLayout.setOnClickListener(this);
+
+        //map layout
+        CardView mapLayout = (CardView) view.findViewById(R.id.mapLayout);
+        mapLayout.setOnClickListener(this);
     }
 
     @Override
@@ -49,6 +73,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
                              Bundle savedInstanceState) {
 
         View dashView = inflater.inflate(R.layout.fragment_dash_board, container, false);
+
         //set listeners
         setOnClickListeners(dashView);
 
@@ -68,6 +93,46 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
 
             //set checked item
             navigationView.setCheckedItem(R.id.nav_home);
+        } else if(id == R.id.aboutUsLayout) {
+            cfManager.setCurrentFragment(ABOUT_US_ID);
+            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+            ft.setCustomAnimations(R.anim.slide_in_right, 0);
+            ft.replace(R.id.flMain, new AboutUsFragment(cfManager));
+            ft.commit();
+
+            //set checked item
+            navigationView.setCheckedItem(R.id.nav_about_us);
+        } else if(id == R.id.servicesLayout) {
+            cfManager.setCurrentFragment(SERVICES_ID);
+            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+            ft.setCustomAnimations(R.anim.slide_in_right, 0);
+            ft.replace(R.id.flMain, new ServicesFragment(cfManager));
+            ft.commit();
+
+            //set checked item
+            navigationView.setCheckedItem(R.id.nav_services);
+        } else if(id == R.id.clientsLayout) {
+
+        } else if(id == R.id.careersLayout) {
+            cfManager.setCurrentFragment(CAREERS_ID);
+            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+            ft.setCustomAnimations(R.anim.slide_in_right, 0);
+            ft.replace(R.id.flMain, new CareersFragment());
+            ft.commit();
+
+            //set checked item
+            navigationView.setCheckedItem(R.id.nav_career);
+        } else if(id == R.id.contactLayout) {
+            cfManager.setCurrentFragment(CONTACT_US_ID);
+            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+            ft.setCustomAnimations(R.anim.slide_in_right, 0);
+            ft.replace(R.id.flMain, new ContactUsFragment(cfManager));
+            ft.commit();
+
+            //set checked item
+            navigationView.setCheckedItem(R.id.nav_contact_us);
+        } else if(id == R.id.mapLayout) {
+
         }
     }
 
