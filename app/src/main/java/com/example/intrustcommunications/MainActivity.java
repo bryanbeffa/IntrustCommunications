@@ -197,7 +197,17 @@ public class MainActivity extends AppCompatActivity
             }
 
         } else if (id == R.id.nav_map) {
+            //check if is the current fragment
+            if(cfManager.getCurrentFragment() != MAP_ID) {
 
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_in_right, 0);
+                ft.replace(R.id.flMain, new MapFragment());
+                ft.commit();
+
+                //check if the current is the last fragment
+                cfManager.setCurrentFragment(MAP_ID);
+            }
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
