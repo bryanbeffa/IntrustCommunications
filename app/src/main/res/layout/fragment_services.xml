@@ -492,7 +492,6 @@
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="24dp"
             android:layout_marginRight="24dp"
-            android:layout_marginBottom="24dp"
             android:src="@drawable/intrust_logo" />
 
     </RelativeLayout>

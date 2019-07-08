@@ -15,7 +15,6 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="600dp"
-            android:layout_marginBottom="16dp"
             android:baselineAligned="false"
             android:orientation="vertical">
 
@@ -227,7 +226,6 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
-                android:layout_marginBottom="24dp"
                 android:src="@drawable/intrust_logo" />
 
         </RelativeLayout>

@@ -9,8 +9,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             <ImageView
                 android:id="@+id/dashImage"
                 android:layout_width="wrap_content"
-                android:layout_height="70dp"
+                android:layout_height="90dp"
                 android:src="@drawable/intrust_logo" />
 
         </RelativeLayout>
@@ -62,6 +62,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Home"
+                        android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/second_title" />
 
                 </LinearLayout>
@@ -95,6 +96,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="About Us"
+                        android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/second_title" />
 
                 </LinearLayout>
@@ -114,8 +116,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:background="@drawable/gradient"
+                    android:gravity="center"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -128,6 +130,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Services"
+                        android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/second_title" />
 
                 </LinearLayout>
@@ -161,6 +164,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Clients"
+                        android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/second_title" />
 
                 </LinearLayout>
@@ -180,8 +184,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:background="@drawable/gradient"
+                    android:gravity="center"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -194,6 +198,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Careers"
+                        android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/second_title" />
 
                 </LinearLayout>
@@ -213,9 +218,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@drawable/gradient"
                     android:gravity="center"
                     android:orientation="vertical"
-                    android:background="@drawable/gradient"
                     android:padding="16dp">
 
                     <ImageView
@@ -227,6 +232,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Contact"
+                        android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/second_title" />
 
                 </LinearLayout>
@@ -247,8 +253,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:background="@drawable/gradient"
+                    android:gravity="center"
                     android:orientation="vertical"
                     android:padding="16dp">
 
@@ -261,6 +267,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Where we are"
+                        android:textColor="@color/normalTextColor"
                         android:textSize="@dimen/second_title" />
 
                 </LinearLayout>

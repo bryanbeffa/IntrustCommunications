@@ -15,6 +15,7 @@
     <string name="menu_careers">Careers</string>
     <string name="menu_contact_us">Contact us</string>
     <string name="menu_map">Where we are</string>
+    <string name="footer_string">Copyright \u00a9 Bryan Beffa</string>
 
     <string name="works_list">
         <li>Lead Generation</li>\n
