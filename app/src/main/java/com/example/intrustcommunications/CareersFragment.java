@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -66,6 +67,9 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
+        //set scroll view
+        ScrollView scrollView = (ScrollView) getView().findViewById(R.id.careers_scroll_view);
+
         //get layouts
         RelativeLayout firstJobLayout = (RelativeLayout) getView().findViewById(R.id.firstJobContent);
         RelativeLayout secondJobLayout = (RelativeLayout) getView().findViewById(R.id.secondJobContent);
@@ -81,6 +85,9 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
         int id = view.getId();
 
         if (id == R.id.firstJobButton) {
+
+            //set view
+            scrollView.scrollTo(0, firstButton.getTop());
 
             //get first layout visibility
             int visible = firstJobLayout.getVisibility();
@@ -105,6 +112,9 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
             }
         } else if (id == R.id.secondJobButton) {
 
+            //set view
+            scrollView.scrollTo(0, secondButton.getTop());
+
             //get layout visibility
             int visible = secondJobLayout.getVisibility();
 
@@ -127,6 +137,9 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
                 secondButton.setText("+");
             }
         } else if (id == R.id.thirdJobButton) {
+
+            //set view
+            scrollView.scrollTo(0, thirdButton.getTop());
 
             //get layout visibility
             int visible = thirdJobLayout.getVisibility();
@@ -151,6 +164,9 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
 
             }
         } else if (id == R.id.fourthJobButton) {
+
+            //set view
+            scrollView.scrollTo(0, fourthButton.getTop());
 
             //get layout visibility
             int visible = fourthJobLayout.getVisibility();
