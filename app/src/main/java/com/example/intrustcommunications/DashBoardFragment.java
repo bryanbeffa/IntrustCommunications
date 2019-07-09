@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -19,7 +20,7 @@ import com.google.android.material.navigation.NavigationView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DashBoardFragment extends Fragment implements View.OnClickListener {
+public class DashBoardFragment extends Fragment implements View.OnClickListener, View.OnTouchListener {
 
     private final int HOME_ID = 0;
     private final int ABOUT_US_ID = 1;
@@ -133,8 +134,20 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             navigationView.setCheckedItem(R.id.nav_contact_us);
         } else if(id == R.id.mapLayout) {
 
+            cfManager.setCurrentFragment(MAP_ID);
+            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+            ft.setCustomAnimations(R.anim.slide_in_right, 0);
+            ft.replace(R.id.flMain, new MapFragment());
+            ft.commit();
+
+            //set checked item
+            navigationView.setCheckedItem(R.id.nav_map);
         }
     }
 
 
+    @Override
+    public boolean onTouch(View view, MotionEvent motionEvent) {
+        return false;
+    }
 }

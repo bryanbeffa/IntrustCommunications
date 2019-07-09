@@ -17,13 +17,13 @@
             android:layout_marginTop="1dp"
             android:layout_marginLeft="1dp"
             android:layout_marginRight="1dp"
-            android:layout_marginBottom="30dp">
+            android:layout_marginBottom="40dp">
 
         </com.google.android.gms.maps.MapView>
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="40dp"
             android:layout_alignParentBottom="true"
             android:alignmentMode="alignMargins"
             android:columnCount="4"
@@ -35,7 +35,6 @@
                 android:layout_height="match_parent"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="1dp"
                 android:background="@color/button_selected"
                 android:text="1"
                 android:textColor="@android:color/white"
@@ -47,7 +46,6 @@
                 android:layout_height="match_parent"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="1dp"
                 android:background="@color/details_color"
                 android:text="2"
                 android:textColor="@android:color/white"
@@ -59,7 +57,6 @@
                 android:layout_height="match_parent"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="1dp"
                 android:background="@color/details_color"
                 android:text="3"
                 android:textColor="@android:color/white"
@@ -71,8 +68,6 @@
                 android:layout_height="match_parent"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:layout_marginLeft="1dp"
-                android:layout_marginRight="1dp"
                 android:background="@color/details_color"
                 android:text="4"
                 android:textColor="@android:color/white"
