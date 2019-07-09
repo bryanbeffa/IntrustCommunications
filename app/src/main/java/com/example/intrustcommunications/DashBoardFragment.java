@@ -1,6 +1,8 @@
 package com.example.intrustcommunications;
 
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
@@ -20,7 +22,7 @@ import com.google.android.material.navigation.NavigationView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DashBoardFragment extends Fragment implements View.OnClickListener, View.OnTouchListener {
+public class DashBoardFragment extends Fragment implements View.OnClickListener {
 
     private final int HOME_ID = 0;
     private final int ABOUT_US_ID = 1;
@@ -39,34 +41,147 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener,
         this.navigationView = navigationView;
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void setOnClickListeners(View view) {
         //home layout
-        CardView homeLayout = (CardView) view.findViewById(R.id.homeLayout);
+        final CardView homeLayout = (CardView) view.findViewById(R.id.homeLayout);
         homeLayout.setOnClickListener(this);
 
+        homeLayout.setOnTouchListener(new View.OnTouchListener()
+        {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event)
+            {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    homeLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash));
+
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    homeLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
+                }
+                return false;
+            }
+        });
+
         //about us layout
-        CardView aboutUsLayout = (CardView) view.findViewById(R.id.aboutUsLayout);
+        final CardView aboutUsLayout = (CardView) view.findViewById(R.id.aboutUsLayout);
         aboutUsLayout.setOnClickListener(this);
 
+        aboutUsLayout.setOnTouchListener(new View.OnTouchListener()
+        {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event)
+            {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    aboutUsLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash));
+
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    aboutUsLayout.setCardBackgroundColor(getResources().getColor(R.color.bg_color));
+                }
+                return false;
+            }
+        });
+
         //services layout
-        CardView servicesLayout = (CardView) view.findViewById(R.id.servicesLayout);
+        final CardView servicesLayout = (CardView) view.findViewById(R.id.servicesLayout);
         servicesLayout.setOnClickListener(this);
 
+        servicesLayout.setOnTouchListener(new View.OnTouchListener()
+        {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event)
+            {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    servicesLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash));
+
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    servicesLayout.setCardBackgroundColor(getResources().getColor(R.color.bg_color));
+                }
+                return false;
+            }
+        });
+
         //clients layout
-        CardView clientsLayout = (CardView) view.findViewById(R.id.clientsLayout);
+        final CardView clientsLayout = (CardView) view.findViewById(R.id.clientsLayout);
         clientsLayout.setOnClickListener(this);
 
+        clientsLayout.setOnTouchListener(new View.OnTouchListener()
+        {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event)
+            {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    clientsLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash));
+
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    clientsLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
+                }
+                return false;
+            }
+        });
+
         //careers layout
-        CardView careersLayout = (CardView) view.findViewById(R.id.careersLayout);
+        final CardView careersLayout = (CardView) view.findViewById(R.id.careersLayout);
         careersLayout.setOnClickListener(this);
 
+        careersLayout.setOnTouchListener(new View.OnTouchListener()
+        {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event)
+            {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    careersLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash));
+
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    careersLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
+                }
+                return false;
+            }
+        });
+
         //contact layout
-        CardView contactLayout = (CardView) view.findViewById(R.id.contactLayout);
+        final CardView contactLayout = (CardView) view.findViewById(R.id.contactLayout);
         contactLayout.setOnClickListener(this);
 
+        contactLayout.setOnTouchListener(new View.OnTouchListener()
+        {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event)
+            {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    contactLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash));
+
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    contactLayout.setCardBackgroundColor(getResources().getColor(R.color.bg_color));
+                }
+                return false;
+            }
+        });
+
         //map layout
-        CardView mapLayout = (CardView) view.findViewById(R.id.mapLayout);
+        final CardView mapLayout = (CardView) view.findViewById(R.id.mapLayout);
         mapLayout.setOnClickListener(this);
+
+        mapLayout.setOnTouchListener(new View.OnTouchListener()
+        {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event)
+            {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    mapLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash));
+
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                    mapLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
+                }
+                return false;
+            }
+        });
     }
 
     @Override
@@ -143,11 +258,5 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener,
             //set checked item
             navigationView.setCheckedItem(R.id.nav_map);
         }
-    }
-
-
-    @Override
-    public boolean onTouch(View view, MotionEvent motionEvent) {
-        return false;
     }
 }
