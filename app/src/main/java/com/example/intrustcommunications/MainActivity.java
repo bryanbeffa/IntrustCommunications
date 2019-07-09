@@ -1,28 +1,15 @@
 package com.example.intrustcommunications;
 
-import android.app.Fragment;
-import android.content.ClipData;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.net.Uri;
+
 import android.os.Bundle;
-
-
-import androidx.appcompat.app.AlertDialog;
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-
 import android.view.MenuItem;
-
-import com.google.android.gms.maps.GoogleMap;
 import com.google.android.material.navigation.NavigationView;
-
 import androidx.drawerlayout.widget.DrawerLayout;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentTransaction;
-
 import android.view.Menu;
 
 public class MainActivity extends AppCompatActivity
@@ -112,7 +99,7 @@ public class MainActivity extends AppCompatActivity
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
-                HomeFragment home = new HomeFragment(cfManager);
+                HomeFragment home = new HomeFragment(cfManager, navigationView);
                 ft.replace(R.id.flMain, home);
                 ft.commit();
 
@@ -143,7 +130,7 @@ public class MainActivity extends AppCompatActivity
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
-                ft.replace(R.id.flMain, new AboutUsFragment(cfManager));
+                ft.replace(R.id.flMain, new AboutUsFragment(cfManager, navigationView));
                 ft.commit();
 
                 //check if the current is the last fragment
@@ -158,7 +145,7 @@ public class MainActivity extends AppCompatActivity
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
-                ft.replace(R.id.flMain, new ServicesFragment(cfManager));
+                ft.replace(R.id.flMain, new ServicesFragment(cfManager, navigationView));
                 ft.commit();
 
                 //check if the current is the last fragment
@@ -189,7 +176,7 @@ public class MainActivity extends AppCompatActivity
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
-                ft.replace(R.id.flMain, new ContactUsFragment(cfManager));
+                ft.replace(R.id.flMain, new ContactUsFragment());
                 ft.commit();
 
                 //check if the current is the last fragment

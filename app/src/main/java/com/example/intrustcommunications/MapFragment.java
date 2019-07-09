@@ -35,11 +35,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
     private MapView mapView;
     private int type = GoogleMap.MAP_TYPE_NORMAL;
 
-    public MapFragment() {
-        // Required empty public constructor
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

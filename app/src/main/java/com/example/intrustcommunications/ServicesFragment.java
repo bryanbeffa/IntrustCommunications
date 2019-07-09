@@ -1,16 +1,13 @@
 package com.example.intrustcommunications;
 
-
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
+import com.google.android.material.navigation.NavigationView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,10 +16,12 @@ public class ServicesFragment extends Fragment implements View.OnClickListener {
 
     private final int CONTACT_US_ID = 6;
     private CurrentFragmentManager cfManager;
+    private NavigationView navigationView;
 
-    public ServicesFragment(CurrentFragmentManager cfManager) {
+    public ServicesFragment(CurrentFragmentManager cfManager, NavigationView navigationView) {
         // Required empty public constructor
         this.cfManager = cfManager;
+        this.navigationView = navigationView;
     }
 
     @Override
@@ -75,7 +74,7 @@ public class ServicesFragment extends Fragment implements View.OnClickListener {
 
             cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new TelesalesFragment(cfManager));
+            ft.replace(R.id.flMain, new TelesalesFragment(cfManager, navigationView));
             ft.commit();
         } else if (id == R.id.chatWebKnowMore) {
 
@@ -114,11 +113,13 @@ public class ServicesFragment extends Fragment implements View.OnClickListener {
 
                 FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
-                ft.replace(R.id.flMain, new ContactUsFragment(cfManager));
+                ft.replace(R.id.flMain, new ContactUsFragment());
                 ft.commit();
 
                 //check if the current is the last fragment
                 cfManager.setCurrentFragment(CONTACT_US_ID);
+
+                navigationView.setCheckedItem(R.id.nav_contact_us);
             }
         }
     }

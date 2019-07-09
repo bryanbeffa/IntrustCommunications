@@ -2,7 +2,6 @@ package com.example.intrustcommunications;
 
 
 import android.annotation.SuppressLint;
-import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.cardview.widget.CardView;
@@ -13,8 +12,6 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.RelativeLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -54,7 +51,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             public boolean onTouch(View v, MotionEvent event)
             {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    homeLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash));
+                    homeLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_dark));
 
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     homeLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
@@ -74,7 +71,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             public boolean onTouch(View v, MotionEvent event)
             {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    aboutUsLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash));
+                    aboutUsLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_light));
 
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     aboutUsLayout.setCardBackgroundColor(getResources().getColor(R.color.bg_color));
@@ -94,7 +91,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             public boolean onTouch(View v, MotionEvent event)
             {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    servicesLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash));
+                    servicesLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_light));
 
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     servicesLayout.setCardBackgroundColor(getResources().getColor(R.color.bg_color));
@@ -114,7 +111,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             public boolean onTouch(View v, MotionEvent event)
             {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    clientsLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash));
+                    clientsLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_dark));
 
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     clientsLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
@@ -134,7 +131,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             public boolean onTouch(View v, MotionEvent event)
             {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    careersLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash));
+                    careersLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_dark));
 
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     careersLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
@@ -154,7 +151,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             public boolean onTouch(View v, MotionEvent event)
             {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    contactLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash));
+                    contactLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_light));
 
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     contactLayout.setCardBackgroundColor(getResources().getColor(R.color.bg_color));
@@ -174,7 +171,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             public boolean onTouch(View v, MotionEvent event)
             {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    mapLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash));
+                    mapLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_dark));
 
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     mapLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
@@ -204,7 +201,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             cfManager.setCurrentFragment(HOME_ID);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
             ft.setCustomAnimations(R.anim.slide_in_right, 0);
-            ft.replace(R.id.flMain, new HomeFragment(cfManager));
+            ft.replace(R.id.flMain, new HomeFragment(cfManager, navigationView));
             ft.commit();
 
             //set checked item
@@ -213,7 +210,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             cfManager.setCurrentFragment(ABOUT_US_ID);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
             ft.setCustomAnimations(R.anim.slide_in_right, 0);
-            ft.replace(R.id.flMain, new AboutUsFragment(cfManager));
+            ft.replace(R.id.flMain, new AboutUsFragment(cfManager, navigationView));
             ft.commit();
 
             //set checked item
@@ -222,7 +219,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             cfManager.setCurrentFragment(SERVICES_ID);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
             ft.setCustomAnimations(R.anim.slide_in_right, 0);
-            ft.replace(R.id.flMain, new ServicesFragment(cfManager));
+            ft.replace(R.id.flMain, new ServicesFragment(cfManager, navigationView));
             ft.commit();
 
             //set checked item
@@ -242,7 +239,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             cfManager.setCurrentFragment(CONTACT_US_ID);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
             ft.setCustomAnimations(R.anim.slide_in_right, 0);
-            ft.replace(R.id.flMain, new ContactUsFragment(cfManager));
+            ft.replace(R.id.flMain, new ContactUsFragment());
             ft.commit();
 
             //set checked item

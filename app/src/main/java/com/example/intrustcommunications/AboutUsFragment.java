@@ -1,17 +1,13 @@
 package com.example.intrustcommunications;
 
-
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ScrollView;
-
+import com.google.android.material.navigation.NavigationView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,11 +15,14 @@ import android.widget.ScrollView;
 public class AboutUsFragment extends Fragment implements View.OnClickListener {
 
     private final int CONTACT_US_ID = 6;
+    private NavigationView navigationView;
+
     private CurrentFragmentManager cfManager;
 
-    public AboutUsFragment(CurrentFragmentManager cfManager) {
+    public AboutUsFragment(CurrentFragmentManager cfManager, NavigationView navigationView) {
         // Required empty public constructor
         this.cfManager = cfManager;
+        this.navigationView = navigationView;
     }
 
     @Override
@@ -53,9 +52,10 @@ public class AboutUsFragment extends Fragment implements View.OnClickListener {
             cfManager.setCurrentFragment(CONTACT_US_ID);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
             ft.setCustomAnimations(R.anim.slide_in_right, 0);
-            ft.replace(R.id.flMain, new ContactUsFragment(cfManager));
+            ft.replace(R.id.flMain, new ContactUsFragment());
             ft.commit();
 
+            navigationView.setCheckedItem(R.id.nav_contact_us);
         }
     }
 }

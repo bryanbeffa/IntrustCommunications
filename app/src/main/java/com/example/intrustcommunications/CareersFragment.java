@@ -3,9 +3,7 @@ package com.example.intrustcommunications;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +13,6 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,11 +20,6 @@ import android.widget.Toast;
 public class CareersFragment extends Fragment implements View.OnClickListener {
 
     private final String MAIL_TO = "mick.hull@intrustcommunications.ie";
-
-    public CareersFragment() {
-        // Required empty public constructor
-    }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

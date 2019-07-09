@@ -15,23 +15,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.material.navigation.NavigationView;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ContactUsFragment extends Fragment implements View.OnClickListener{
 
-    private CurrentFragmentManager cfManager;
-
     private final String FIXED_NUMBER = "00353212355310";
     private final String MOBILE_NUMBER = "00353872877025";
     private final String MAIL_TO = "mick.hull@intrustcommunications.ie";
-
-    public ContactUsFragment(CurrentFragmentManager cfManager) {
-        // Required empty public constructor
-        this.cfManager = cfManager;
-    }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

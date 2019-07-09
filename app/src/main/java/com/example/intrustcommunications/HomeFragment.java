@@ -15,6 +15,8 @@ import android.widget.MediaController;
 import android.widget.ScrollView;
 import android.widget.VideoView;
 
+import com.google.android.material.navigation.NavigationView;
+
 import java.util.zip.Inflater;
 
 
@@ -24,10 +26,12 @@ import java.util.zip.Inflater;
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
     private CurrentFragmentManager cfManager;
+    private NavigationView navigationView;
 
-    public HomeFragment(CurrentFragmentManager cfManager) {
+    public HomeFragment(CurrentFragmentManager cfManager, NavigationView navigationView) {
         // Required empty public constructor
         this.cfManager = cfManager;
+        this.navigationView = navigationView;
     }
 
 
@@ -103,7 +107,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
             cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new TelesalesFragment(cfManager));
+            ft.replace(R.id.flMain, new TelesalesFragment(cfManager, navigationView));
             ft.commit();
         } else if (id == R.id.chatWebKnowMore) {
 

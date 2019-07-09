@@ -9,12 +9,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.navigation.NavigationView;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class BackOfficeFragment extends Fragment {
 
+
+    private NavigationView navigationView;
 
     public BackOfficeFragment() {
         // Required empty public constructor
