@@ -7,6 +7,7 @@
     <color name="firstTitleColor">@color/cardview_dark_background</color>
     <color name="secondTitleColor">@android:color/darker_gray</color>
     <color name="details_color">#7DCACD</color>
+    <color name="button_selected">#a2e5e8</color>
     <color name="bg_color">@android:color/white</color>
     <color name="cit_bg_color">@android:color/background_dark</color>
     <color name="cit_txt_color">@android:color/darker_gray</color>
