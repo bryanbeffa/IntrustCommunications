@@ -16,26 +16,40 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:background="@drawable/dash_bg"
-            android:paddingBottom="24dp"
-            android:paddingTop="24dp"
-            android:paddingLeft="24dp"
+            android:paddingLeft="16dp"
             android:paddingRight="16dp">
 
-            <TextView
-                android:id="@+id/dashTitle"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dashboard"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/second_title" />
+                android:layout_centerVertical="true">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/dashTitle"
-                android:text="7 items"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/normal_text" />
+                <TextView
+                    android:id="@+id/dashTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dashboard"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/second_title" />
+
+                <TextView
+                    android:id="@+id/dashSecondTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dashTitle"
+                    android:text="Intrust Comunications"
+                    android:textColor="@android:color/white"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dashSecondTitle"
+                    android:text="7 items"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/normal_text" />
+
+            </RelativeLayout>
 
         </RelativeLayout>
 
