@@ -13,21 +13,36 @@
         android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@android:color/white">
+            android:background="@drawable/dash_bg"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/dashTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dashboard"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/second_title" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dashTitle"
+                android:text="7 items"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/normal_text" />
 
             <ImageView
-                android:id="@+id/dashImage"
-                android:layout_width="wrap_content"
-                android:layout_height="90dp"
-                android:src="@drawable/intrust_logo" />
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_below="@+id/dashTitle"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/intrust_logo_app" />
 
         </RelativeLayout>
+
 
         <GridLayout
             android:layout_width="match_parent"
@@ -244,9 +259,9 @@
                 android:layout_rowWeight="1"
                 android:layout_columnSpan="2"
                 android:layout_columnWeight="1"
-                app:cardBackgroundColor="@color/details_color"
                 android:layout_margin="6dp"
                 android:elevation="6dp"
+                app:cardBackgroundColor="@color/details_color"
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
@@ -273,6 +288,23 @@
             </androidx.cardview.widget.CardView>
 
         </GridLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:id="@+id/dashImage"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:src="@drawable/intrust_logo" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 
