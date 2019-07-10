@@ -12,7 +12,32 @@
         android:layout_marginBottom="16dp"
         android:orientation="vertical">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/dash_bg"
+            android:paddingBottom="24dp"
+            android:paddingTop="24dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="16dp">
 
+            <TextView
+                android:id="@+id/dashTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dashboard"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/second_title" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dashTitle"
+                android:text="7 items"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/normal_text" />
+
+        </RelativeLayout>
 
 
         <GridLayout
