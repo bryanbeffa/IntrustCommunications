@@ -28,7 +28,7 @@
                 <ImageView
                     android:id="@+id/aboutBg"
                     android:layout_width="match_parent"
-                    android:layout_height="292dp"
+                    android:layout_height="240dp"
                     android:src="@drawable/about_us_bg"
                     tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
@@ -38,8 +38,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/aboutBg"
                     android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginBottom="16dp"
                     android:text="About Us"
                     android:textAlignment="center"
                     android:textColor="@color/firstTitleColor"
@@ -52,7 +53,7 @@
                     android:layout_below="@id/aboutUsTitle"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginBottom="16dp"
                     android:text="Who we are"
                     android:textAlignment="center"
                     android:textColor="@color/secondTitleColor"
