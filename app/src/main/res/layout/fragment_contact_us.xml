@@ -30,8 +30,8 @@
                 <ImageView
                     android:id="@+id/contactUsBg"
                     android:layout_width="match_parent"
-                    android:layout_height="292dp"
-                    android:src="@drawable/webchat" />
+                    android:layout_height="240dp"
+                    android:src="@drawable/contact_us_bg" />
 
                 <TextView
                     android:id="@+id/contactUsTitle"
@@ -40,7 +40,8 @@
                     android:layout_below="@+id/contactUsBg"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
                     android:text="Contact Us"
                     android:textAlignment="center"
                     android:textColor="@color/firstTitleColor"
@@ -98,7 +99,7 @@
                     android:layout_marginBottom="24dp"
                     android:text="00353 (21) 2355310"
                     android:textAlignment="center"
-                    android:textColor="@color/normalTextColor"
+                    android:textColor="@android:color/holo_blue_dark"
                     android:textSize="@dimen/normal_text" />
 
                 <TextView
@@ -125,7 +126,7 @@
                     android:layout_marginBottom="24dp"
                     android:text="00353 (87) 2877025"
                     android:textAlignment="center"
-                    android:textColor="@color/normalTextColor"
+                    android:textColor="@android:color/holo_blue_dark"
                     android:textSize="@dimen/normal_text" />
 
                 <TextView

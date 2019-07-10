@@ -29,8 +29,7 @@
                     android:id="@+id/aboutBg"
                     android:layout_width="match_parent"
                     android:layout_height="240dp"
-                    android:src="@drawable/about_us_bg"
-                    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                    android:src="@drawable/about_us_bg"/>
 
                 <TextView
                     android:id="@+id/aboutUsTitle"
