@@ -137,7 +137,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
             cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity(). getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new LeadGenerationFragment());
+            ft.replace(R.id.flMain, new LeadGenerationFragment(cfManager, navigationView));
             ft.commit();
         }
     }
