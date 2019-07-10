@@ -30,8 +30,8 @@ public class BackOfficeFragment extends Fragment implements View.OnClickListener
 
     private void setOnClickListeners(View view) {
         //first job button
-        TextView firstJobButton = (TextView) view.findViewById(R.id.contactUsButton);
-        firstJobButton.setOnClickListener(this);
+        TextView contactUsButton = (TextView) view.findViewById(R.id.contactUsButton);
+        contactUsButton.setOnClickListener(this);
     }
 
     @Override
