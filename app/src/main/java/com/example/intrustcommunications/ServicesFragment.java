@@ -80,7 +80,7 @@ public class ServicesFragment extends Fragment implements View.OnClickListener {
 
             cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new WebChatFragment());
+            ft.replace(R.id.flMain, new WebChatFragment(cfManager, navigationView));
             ft.commit();
         } else if (id == R.id.backOfficeKnowMore) {
 
