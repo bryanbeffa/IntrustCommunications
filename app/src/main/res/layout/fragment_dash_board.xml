@@ -12,36 +12,7 @@
         android:layout_marginBottom="16dp"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/dash_bg"
-            android:padding="24dp">
 
-            <TextView
-                android:id="@+id/dashTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Dashboard"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/second_title" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/dashTitle"
-                android:text="7 items"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/normal_text" />
-
-            <ImageView
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_below="@+id/dashTitle"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/intrust_logo_app" />
-
-        </RelativeLayout>
 
 
         <GridLayout
