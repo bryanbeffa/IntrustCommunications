@@ -74,37 +74,37 @@ public class ServicesFragment extends Fragment implements View.OnClickListener {
 
             cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new TelesalesFragment(cfManager, navigationView));
+            ft.replace(R.id.flMain, new TelesalesFragment(cfManager, navigationView)).addToBackStack(null);
             ft.commit();
         } else if (id == R.id.chatWebKnowMore) {
 
             cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new WebChatFragment(cfManager, navigationView));
+            ft.replace(R.id.flMain, new WebChatFragment(cfManager, navigationView)).addToBackStack(null);
             ft.commit();
         } else if (id == R.id.backOfficeKnowMore) {
 
             cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new BackOfficeFragment(cfManager, navigationView));
+            ft.replace(R.id.flMain, new BackOfficeFragment(cfManager, navigationView)).addToBackStack(null);
             ft.commit();
         } else if (id == R.id.customerServiceKnowMore) {
 
             cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new BackOfficeFragment(cfManager, navigationView));
+            ft.replace(R.id.flMain, new BackOfficeFragment(cfManager, navigationView)).addToBackStack(null);
             ft.commit();
         } else if (id == R.id.customerRetentionKnowMore) {
 
             cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new CustomerRetentionFragment(cfManager, navigationView));
+            ft.replace(R.id.flMain, new CustomerRetentionFragment(cfManager, navigationView)).addToBackStack(null);
             ft.commit();
         } else if (id == R.id.leadGenerationKnowMore) {
 
             cfManager.setCurrentFragment(-1);
             FragmentTransaction ft = getActivity(). getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.flMain, new LeadGenerationFragment(cfManager, navigationView));
+            ft.replace(R.id.flMain, new LeadGenerationFragment(cfManager, navigationView)).addToBackStack(null);
             ft.commit();
         } else if (id == R.id.contactUsButton) {
 
