@@ -160,6 +160,18 @@
             </RelativeLayout>
             <!-- End first part -->
 
+            <ImageView
+                android:id="@+id/intrustImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstPart"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginBottom="24dp"
+                android:src="@drawable/intrust_logo" />
+
+
         </RelativeLayout>
     </ScrollView>
 

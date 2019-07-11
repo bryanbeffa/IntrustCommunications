@@ -15,7 +15,6 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="24dp"
             android:baselineAligned="false"
             android:orientation="vertical">
 
@@ -28,8 +27,8 @@
                 <ImageView
                     android:id="@+id/leadBg"
                     android:layout_width="match_parent"
-                    android:layout_height="292dp"
-                    android:src="@drawable/webchat" />
+                    android:layout_height="240dp"
+                    android:src="@drawable/lead_generation_bg" />
 
                 <TextView
                     android:id="@+id/leadTitle"
@@ -37,8 +36,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/leadBg"
                     android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
                     android:layout_marginRight="16dp"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginBottom="16dp"
                     android:text="Lead Generation"
                     android:textAlignment="center"
                     android:textColor="@color/firstTitleColor"
@@ -51,7 +51,7 @@
                     android:layout_below="@id/leadTitle"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginBottom="16dp"
                     android:text="Are you having challenges trying to generate sales?"
                     android:textAlignment="center"
                     android:textColor="@color/secondTitleColor"
@@ -64,8 +64,8 @@
                     android:layout_below="@id/leadSecondTitle"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:layout_marginBottom="24dp"
-                    android:text="Increase Your Sales and Generate Leads with a Partner."
+                    android:layout_marginBottom="16dp"
+                    android:text="Increase Your Sales and Generate Leads with a Partner"
                     android:textAlignment="center"
                     android:textColor="@color/secondTitleColor"
                     android:textSize="@dimen/second_title" />
@@ -206,7 +206,7 @@
                     android:layout_marginLeft="24dp"
                     android:layout_marginEnd="24dp"
                     android:layout_marginRight="24dp"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:text="Contact Us"
                     android:textColor="@color/secondTitleColor"
@@ -221,7 +221,7 @@
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="Do not esitate to contact us:"
+                    android:text="Do not hesitate to contact us:"
                     android:textAlignment="center"
                     android:textColor="@color/normalTextColor"
                     android:textSize="@dimen/normal_text" />
