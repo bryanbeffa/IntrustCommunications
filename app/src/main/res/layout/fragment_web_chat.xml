@@ -24,16 +24,15 @@
                 android:id="@+id/firstPartLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="16dp"
                 android:baselineAligned="false"
                 android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/webchatBg"
                     android:layout_width="match_parent"
-                    android:layout_height="292dp"
-                    android:layout_marginBottom="24dp"
-                    android:src="@drawable/webchat" />
+                    android:layout_height="240dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/web_chat_bg" />
 
                 <TextView
                     android:id="@+id/webchatTitle"
@@ -42,7 +41,7 @@
                     android:layout_below="@+id/webchatBg"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginBottom="16dp"
                     android:text="Web Chat"
                     android:textAlignment="center"
                     android:textColor="@color/firstTitleColor"
@@ -55,7 +54,7 @@
                     android:layout_below="@id/webchatTitle"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:layout_marginBottom="24dp"
+                    android:layout_marginBottom="16dp"
                     android:text="Intrust Communications are an Outsourced Contact Centre Based in Cork, Ireland"
                     android:textAlignment="center"
                     android:textColor="@color/secondTitleColor"

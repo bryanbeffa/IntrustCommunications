@@ -15,8 +15,6 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
             android:baselineAligned="false"
             android:orientation="vertical">
 
@@ -24,16 +22,16 @@
             <ImageView
                 android:id="@+id/customerBg"
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
-                android:src="@drawable/customer_bg"
-                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                android:layout_height="240dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/customer_retention_bg" />
 
             <TextView
                 android:id="@+id/aboutUsTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/customerBg"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="16dp"
                 android:text="Customer Retention And Win-back"
                 android:textAlignment="center"
                 android:textColor="@color/firstTitleColor"
@@ -48,11 +46,11 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
                 android:text="All Businesses need to increase sales but also it is essential that your present customers are kept happy and are maintained by your business. It is no use taking on 100 customers and then losing 50! Increase Your Installed Customer base with a Partner."
-                android:textColor="@color/normalTextColor"
-                android:textSize="@dimen/normal_text"
-                android:textStyle="bold" />
+                android:textColor="@color/secondTitleColor"
+                android:textSize="@dimen/second_title" />
 
             <TextView
                 android:id="@+id/secondPara"
