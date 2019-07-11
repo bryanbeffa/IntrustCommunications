@@ -25,7 +25,7 @@
             <ImageView
                 android:id="@+id/servicesBg"
                 android:layout_width="match_parent"
-                android:layout_height="292dp"
+                android:layout_height="240dp"
                 android:src="@drawable/services_bg" />
 
             <TextView
