@@ -48,7 +48,7 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center"
-                android:text="All Businesses need to increase sales but also it is essential that your present customers are kept happy and are maintained by your business. It is no use taking on 100 customers and then losing 50! Increase Your Installed Customer base with a Partner."
+                android:text="All Businesses need to increase sales but also it is essential that your present customers are kept happy and are maintained by your business. It is no use taking on 100 customers and then losing 50! Increase Your Installed Customer base with a Partner"
                 android:textColor="@color/secondTitleColor"
                 android:textSize="@dimen/second_title" />
 
