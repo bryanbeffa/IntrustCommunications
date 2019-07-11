@@ -110,31 +110,42 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
         terrain.setBackgroundColor(getResources().getColor(R.color.details_color));
         hybrid.setBackgroundColor(getResources().getColor(R.color.details_color));
 
-        if(id == R.id.normalMap) {
+        if (id == R.id.normalMap) {
 
             //set normal map
-            type = GoogleMap.MAP_TYPE_NORMAL;
+            if (type != GoogleMap.MAP_TYPE_NORMAL) {
+                type = GoogleMap.MAP_TYPE_NORMAL;
+                googleMap.setMapType(type);
+            }
             normal.setBackgroundColor(getResources().getColor(R.color.button_selected));
 
-        } else if(id == R.id.satelliteMap) {
+        } else if (id == R.id.satelliteMap) {
 
             //set satellite map
-            type = GoogleMap.MAP_TYPE_SATELLITE;
+            if (type != GoogleMap.MAP_TYPE_SATELLITE) {
+                type = GoogleMap.MAP_TYPE_SATELLITE;
+                googleMap.setMapType(type);
+            }
             satellite.setBackgroundColor(getResources().getColor(R.color.button_selected));
 
-        } else if(id == R.id.terrainMap) {
+        } else if (id == R.id.terrainMap) {
 
             //set satellite map
-            type = GoogleMap.MAP_TYPE_TERRAIN;
+            if (type != GoogleMap.MAP_TYPE_TERRAIN) {
+                type = GoogleMap.MAP_TYPE_TERRAIN;
+                googleMap.setMapType(type);
+            }
             terrain.setBackgroundColor(getResources().getColor(R.color.button_selected));
 
-        } else if(id == R.id.hybridMap) {
+        } else if (id == R.id.hybridMap) {
 
             //set satellite map
-            type = GoogleMap.MAP_TYPE_HYBRID;
+            if (type != GoogleMap.MAP_TYPE_HYBRID) {
+                type = GoogleMap.MAP_TYPE_HYBRID;
+                googleMap.setMapType(type);
+            }
             hybrid.setBackgroundColor(getResources().getColor(R.color.button_selected));
         }
 
-        googleMap.setMapType(type);
     }
 }
