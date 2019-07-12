@@ -52,7 +52,7 @@ public class AboutUsFragment extends Fragment implements View.OnClickListener {
             cfManager.setCurrentFragment(CONTACT_US_ID);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
             ft.setCustomAnimations(R.anim.slide_in_right, 0);
-            ft.replace(R.id.flMain, new ContactUsFragment());
+            ft.replace(R.id.flMain, new ContactUsFragment(cfManager, navigationView));
             ft.commit();
 
             navigationView.setCheckedItem(R.id.nav_contact_us);

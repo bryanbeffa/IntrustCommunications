@@ -190,9 +190,9 @@
 
             <RelativeLayout
                 android:id="@+id/mapPart"
-                android:layout_below="@id/firstPart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/firstPart"
                 android:padding="8dp">
 
                 <TextView
@@ -208,10 +208,11 @@
                     android:textSize="@dimen/second_title" />
 
                 <ImageView
-                    android:layout_below="@id/mapTitle"
+                    android:id="@+id/mapImage"
                     android:layout_width="match_parent"
                     android:layout_height="400dp"
-                    android:src="@drawable/map_bg"/>
+                    android:layout_below="@id/mapTitle"
+                    android:src="@drawable/map_bg" />
 
             </RelativeLayout>
 

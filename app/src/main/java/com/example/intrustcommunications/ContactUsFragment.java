@@ -8,11 +8,13 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -26,7 +28,16 @@ public class ContactUsFragment extends Fragment implements View.OnClickListener{
     private final String FIXED_NUMBER = "00353212355310";
     private final String MOBILE_NUMBER = "00353872877025";
     private final String MAIL_TO = "mick.hull@intrustcommunications.ie";
+    private final int MAP_ID = 5;
 
+    private CurrentFragmentManager cfManager;
+    private NavigationView navigationView;
+
+    public ContactUsFragment(CurrentFragmentManager cfManager, NavigationView navigationView) {
+        // Required empty public constructor
+        this.cfManager = cfManager;
+        this.navigationView = navigationView;
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -51,6 +62,10 @@ public class ContactUsFragment extends Fragment implements View.OnClickListener{
         //email field
         TextView emailLabel = (TextView) view.findViewById(R.id.mailLabel);
         emailLabel.setOnClickListener(this);
+
+        //map image
+        ImageView map = (ImageView) view.findViewById(R.id.mapImage);
+        map.setOnClickListener(this);
     }
 
     @Override
@@ -117,6 +132,15 @@ public class ContactUsFragment extends Fragment implements View.OnClickListener{
                             // do nothing
                         }
                     }).show();
+        } else if (id == R.id.mapImage) {
+            cfManager.setCurrentFragment(MAP_ID);
+            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+            ft.setCustomAnimations(R.anim.slide_in_right, 0);
+            ft.replace(R.id.flMain, new MapFragment());
+            ft.commit();
+
+            //set checked item
+            navigationView.setCheckedItem(R.id.nav_map);
         }
     }
 }

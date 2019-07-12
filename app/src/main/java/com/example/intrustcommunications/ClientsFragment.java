@@ -58,7 +58,7 @@ public class ClientsFragment extends Fragment implements View.OnClickListener {
 
                 FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
-                ft.replace(R.id.flMain, new ContactUsFragment());
+                ft.replace(R.id.flMain, new ContactUsFragment(cfManager, navigationView));
                 ft.commit();
 
                 //check if the current is the last fragment
