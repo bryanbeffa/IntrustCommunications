@@ -201,7 +201,7 @@
                 android:layout_below="@id/nicholasPart"
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_marginBottom="24dp"
+                android:layout_marginBottom="16dp"
                 android:background="@color/cit_bg_color">
 
                 <ImageView
@@ -257,6 +257,70 @@
 
             </RelativeLayout>
             <!-- end cit. -->
+
+            <!-- Contact us part-->
+            <RelativeLayout
+                android:id="@+id/contactUsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rossPart"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:baselineAligned="false"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/contactTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="Contact Us"
+                    android:textColor="@color/secondTitleColor"
+                    android:textSize="@dimen/second_title" />
+
+                <TextView
+                    android:id="@+id/contactUsPara"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/contactTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Do not esitate to contact us:"
+                    android:textAlignment="center"
+                    android:textColor="@color/normalTextColor"
+                    android:textSize="@dimen/normal_text" />
+
+                <Button
+                    android:id="@+id/contactUsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/contactUsPara"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@color/details_color"
+                    android:text="Contact Us"
+                    android:textColor="@android:color/white" />
+
+            </RelativeLayout>
+            <!-- end contact us -->
+
+            <ImageView
+                android:id="@+id/intrustImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/contactUsLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:src="@drawable/intrust_logo" />
 
         </RelativeLayout>
 

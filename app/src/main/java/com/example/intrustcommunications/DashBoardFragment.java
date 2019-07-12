@@ -228,7 +228,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             cfManager.setCurrentFragment(CLIENTS_ID);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
             ft.setCustomAnimations(R.anim.slide_in_right, 0);
-            ft.replace(R.id.flMain, new ClientsFragment());
+            ft.replace(R.id.flMain, new ClientsFragment(cfManager, navigationView));
             ft.commit();
 
             //set checked item
