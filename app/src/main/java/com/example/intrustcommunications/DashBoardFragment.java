@@ -225,7 +225,14 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             //set checked item
             navigationView.setCheckedItem(R.id.nav_services);
         } else if(id == R.id.clientsLayout) {
+            cfManager.setCurrentFragment(CLIENTS_ID);
+            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+            ft.setCustomAnimations(R.anim.slide_in_right, 0);
+            ft.replace(R.id.flMain, new ClientsFragment());
+            ft.commit();
 
+            //set checked item
+            navigationView.setCheckedItem(R.id.nav_clients);
         } else if(id == R.id.careersLayout) {
             cfManager.setCurrentFragment(CAREERS_ID);
             FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();

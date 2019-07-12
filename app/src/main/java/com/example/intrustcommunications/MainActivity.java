@@ -155,6 +155,19 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_clients) {
 
+            //check if is the current fragment
+            if(cfManager.getCurrentFragment() != CLIENTS_ID) {
+
+                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                ft.setCustomAnimations(R.anim.slide_in_right, 0);
+                ft.replace(R.id.flMain, new ClientsFragment());
+                ft.commit();
+
+                //check if the current is the last fragment
+                cfManager.setCurrentFragment(CLIENTS_ID);
+
+            }
+
         } else if (id == R.id.nav_career) {
             //check if is the current fragment
             if(cfManager.getCurrentFragment() != CAREERS_ID) {

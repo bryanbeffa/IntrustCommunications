@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClientsFragment">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/home_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:descendantFocusability="blocksDescendants"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity"
+        tools:showIn="@layout/app_bar_main">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- First Part -->
+            <RelativeLayout
+                android:id="@+id/firstPart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/leadBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:src="@drawable/clients_bg" />
+
+                <TextView
+                    android:id="@+id/leadTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/leadBg"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Clients"
+                    android:textAlignment="center"
+                    android:textColor="@color/firstTitleColor"
+                    android:textSize="@dimen/first_title" />
+
+                <TextView
+                    android:id="@+id/leadSecondTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/leadTitle"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Some of our customers and their testimonials"
+                    android:textAlignment="center"
+                    android:textColor="@color/secondTitleColor"
+                    android:textSize="@dimen/second_title" />
+
+            </RelativeLayout>
+            <!-- end first part -->
+
+            <!-- cit. adrian -->
+            <RelativeLayout
+                android:id="@+id/adrianPart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstPart"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="24dp"
+                android:background="@color/cit_bg_color">
+
+                <ImageView
+                    android:id="@+id/adrianImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:src="@drawable/adrian" />
+
+                <TextView
+                    android:id="@+id/adrianCit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/adrianImage"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="”I use Intrust Communications for my Outbound and Lead Generation Campaigns and Mick and his team always deliver. I recommend anyone to try Intrust Communications.”"
+                    android:textColor="@color/cit_txt_color"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/adrianTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/adrianCit"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:text="Adrian Erangey"
+                    android:textColor="@color/cit_title_color"
+                    android:textSize="@dimen/normal_text"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/adrianRole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/adrianTitle"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="Managing Director -VTSL hosted, Communications"
+                    android:textColor="@color/cit_txt_color"
+                    android:textSize="@dimen/normal_text" />
+
+            </RelativeLayout>
+            <!-- end cit. -->
+
+            <!-- cit. nicholas -->
+            <RelativeLayout
+                android:id="@+id/nicholasPart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/adrianPart"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="24dp"
+                android:background="@color/cit_bg_color">
+
+                <ImageView
+                    android:id="@+id/nicholasImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:src="@drawable/nicholas" />
+
+                <TextView
+                    android:id="@+id/nicholasCit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nicholasImage"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="”I use Intrust Communications for my Call answering Service and Lead Generation Campaigns and I always get excellent results and first class reporting. Mick comes back with suggestions on how to improve results and his service is excellent.”"
+                    android:textColor="@color/cit_txt_color"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/nicholasTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nicholasCit"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:text="Nicholas Charalambous"
+                    android:textColor="@color/cit_title_color"
+                    android:textSize="@dimen/normal_text"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/nicholasRole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nicholasTitle"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="Managing Director - Alpha Wealth"
+                    android:textColor="@color/cit_txt_color"
+                    android:textSize="@dimen/normal_text" />
+
+            </RelativeLayout>
+            <!-- end cit. -->
+
+            <!-- cit. Ross Williams -->
+            <RelativeLayout
+                android:id="@+id/rossPart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nicholasPart"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="24dp"
+                android:background="@color/cit_bg_color">
+
+                <ImageView
+                    android:id="@+id/rossImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:src="@drawable/ross_williams" />
+
+                <TextView
+                    android:id="@+id/rossCit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rossImage"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="“I use Intrust Communications for my Lead Generation Campaigns and I find their service is very good with excellent results”."
+                    android:textColor="@color/cit_txt_color"
+                    android:textSize="@dimen/normal_text" />
+
+                <TextView
+                    android:id="@+id/rossTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rossCit"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:text="Ross Williams"
+                    android:textColor="@color/cit_title_color"
+                    android:textSize="@dimen/normal_text"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/rossRole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rossTitle"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="Director-Scamont Engineering"
+                    android:textColor="@color/cit_txt_color"
+                    android:textSize="@dimen/normal_text" />
+
+            </RelativeLayout>
+            <!-- end cit. -->
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>
