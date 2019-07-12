@@ -188,11 +188,38 @@
             </RelativeLayout>
             <!-- End first part -->
 
+            <RelativeLayout
+                android:id="@+id/mapPart"
+                android:layout_below="@id/firstPart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/mapTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Where we are"
+                    android:textAlignment="center"
+                    android:textColor="@color/secondTitleColor"
+                    android:textSize="@dimen/second_title" />
+
+                <ImageView
+                    android:layout_below="@id/mapTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:src="@drawable/map_bg"/>
+
+            </RelativeLayout>
+
             <ImageView
                 android:id="@+id/intrustImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/firstPart"
+                android:layout_below="@id/mapPart"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
