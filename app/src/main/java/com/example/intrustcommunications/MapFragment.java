@@ -66,10 +66,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
         this.googleMap = googleMap;
         this.googleMap.setMapType(type);
 
-        this.googleMap.addMarker(new MarkerOptions().position(new LatLng(51.8926602, -8.364457921))
+        this.googleMap.addMarker(new MarkerOptions().position(new LatLng(51.89268467972574, -8.364436626434326))
                 .title("Intrust Communications"));
 
-        CameraPosition intrust = CameraPosition.builder().target(new LatLng(51.8926602, -8.364457921)).zoom(16)
+        CameraPosition intrust = CameraPosition.builder().target(new LatLng(51.89268467972574, -8.364436626434326)).zoom(16)
                 .bearing(0).tilt(45).build();
 
         googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(intrust));
