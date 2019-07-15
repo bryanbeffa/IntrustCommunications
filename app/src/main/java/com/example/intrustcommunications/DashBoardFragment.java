@@ -50,11 +50,8 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
                     homeLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_dark));
-
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    homeLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
                 }
                 return false;
             }
@@ -70,11 +67,9 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
                     aboutUsLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_light));
 
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    aboutUsLayout.setCardBackgroundColor(getResources().getColor(R.color.bg_color));
                 }
                 return false;
             }
@@ -90,11 +85,9 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
                     servicesLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_light));
 
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    servicesLayout.setCardBackgroundColor(getResources().getColor(R.color.bg_color));
                 }
                 return false;
             }
@@ -110,11 +103,9 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
                     clientsLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_dark));
 
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    clientsLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
                 }
                 return false;
             }
@@ -130,11 +121,9 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
                     careersLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_dark));
 
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    careersLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
                 }
                 return false;
             }
@@ -150,11 +139,9 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
                     contactLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_light));
 
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    contactLayout.setCardBackgroundColor(getResources().getColor(R.color.bg_color));
                 }
                 return false;
             }
@@ -170,11 +157,9 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
                     mapLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_dark));
 
-                } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                    mapLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
                 }
                 return false;
             }

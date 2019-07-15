@@ -46,7 +46,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         setOnClickListeners(homeView);
 
         //set the video source
-        setVideoView(homeView);
+        //setVideoView(homeView);
 
         //set focus up
         ScrollView scrollView = homeView.findViewById(R.id.home_scroll_view);
@@ -56,7 +56,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         return homeView;
     }
 
-    private void setVideoView(View view) {
+    /*private void setVideoView(View view) {
         //find element
         VideoView video = (VideoView) view.findViewById(R.id.mickVideo);
 
@@ -71,7 +71,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         //set media controller
         video.setMediaController(controller);
         controller.setAnchorView(video);
-    }
+    }*/
 
     private void setOnClickListeners(View view) {
         //telesales know more button
