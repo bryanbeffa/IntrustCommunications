@@ -739,7 +739,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/messageEditText"
                         android:background="@color/details_color"
-                        android:text="Submit Cv"
+                        android:text="Send email"
                         android:textColor="@android:color/background_light" />
 
                 </RelativeLayout>
