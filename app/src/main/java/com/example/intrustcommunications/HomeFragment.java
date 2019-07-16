@@ -106,37 +106,37 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         if (id == R.id.inboundKnowMore) {
 
             cfManager.setCurrentFragment(-1);
-            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null);
             ft.replace(R.id.flMain, new TelesalesFragment(cfManager, navigationView));
             ft.commit();
         } else if (id == R.id.chatWebKnowMore) {
 
             cfManager.setCurrentFragment(-1);
-            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null);
             ft.replace(R.id.flMain, new WebChatFragment(cfManager, navigationView));
             ft.commit();
         } else if (id == R.id.backOfficeKnowMore) {
 
             cfManager.setCurrentFragment(-1);
-            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null);
             ft.replace(R.id.flMain, new BackOfficeFragment(cfManager, navigationView));
             ft.commit();
         } else if (id == R.id.customerServiceKnowMore) {
 
             cfManager.setCurrentFragment(-1);
-            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null);
             ft.replace(R.id.flMain, new BackOfficeFragment(cfManager, navigationView));
             ft.commit();
         } else if (id == R.id.customerRetentionKnowMore) {
 
             cfManager.setCurrentFragment(-1);
-            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction().addToBackStack(null);
             ft.replace(R.id.flMain, new CustomerRetentionFragment(cfManager, navigationView));
             ft.commit();
         } else if (id == R.id.leadGenerationKnowMore) {
 
             cfManager.setCurrentFragment(-1);
-            FragmentTransaction ft = getActivity(). getSupportFragmentManager().beginTransaction();
+            FragmentTransaction ft = getActivity(). getSupportFragmentManager().beginTransaction().addToBackStack(null);
             ft.replace(R.id.flMain, new LeadGenerationFragment(cfManager, navigationView));
             ft.commit();
         }
