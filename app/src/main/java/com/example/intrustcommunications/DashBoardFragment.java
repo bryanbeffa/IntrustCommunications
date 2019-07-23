@@ -12,6 +12,8 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.ScrollView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -50,7 +52,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     homeLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_dark));
                 }
                 return false;
@@ -67,7 +69,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     aboutUsLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_light));
 
                 }
@@ -85,7 +87,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     servicesLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_light));
 
                 }
@@ -103,7 +105,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     clientsLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_dark));
 
                 }
@@ -121,7 +123,7 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     careersLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_dark));
 
                 }
@@ -139,9 +141,8 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     contactLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_light));
-
                 }
                 return false;
             }
@@ -157,9 +158,31 @@ public class DashBoardFragment extends Fragment implements View.OnClickListener 
             @Override
             public boolean onTouch(View v, MotionEvent event)
             {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
                     mapLayout.setCardBackgroundColor(getResources().getColor(R.color.selected_dash_dark));
+                }
+                return false;
+            }
+        });
 
+        //map layout
+        final ScrollView main = (ScrollView) view.findViewById(R.id.scrollView);
+        main.setOnClickListener(this);
+
+        main.setOnTouchListener(new View.OnTouchListener()
+        {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event)
+            {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    homeLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
+                    aboutUsLayout.setCardBackgroundColor(getResources().getColor(R.color.bg_color));
+                    servicesLayout.setCardBackgroundColor(getResources().getColor(R.color.bg_color));
+                    clientsLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
+                    careersLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
+                    contactLayout.setCardBackgroundColor(getResources().getColor(R.color.bg_color));
+                    mapLayout.setCardBackgroundColor(getResources().getColor(R.color.details_color));
                 }
                 return false;
             }
