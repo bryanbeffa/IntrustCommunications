@@ -3,18 +3,18 @@ package com.example.intrustcommunications;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Handler;
 import android.view.View;
-import android.widget.ProgressBar;
 
 public class SplashScreen extends AppCompatActivity {
 
+    /**
+     * Constant that defines the splash screen time.
+     * Value 1000 millis.
+     */
     private final int SPLASH_SCREEN_TIME = 1000;
 
     @Override
@@ -24,7 +24,6 @@ public class SplashScreen extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ProgressBar pBar = (ProgressBar) findViewById(R.id.progressBar);
         new Handler().postDelayed(new Runnable() {
             public void run() {
                 Intent mainContext = new Intent(SplashScreen.this, MainActivity.class);
@@ -33,7 +32,6 @@ public class SplashScreen extends AppCompatActivity {
             }
         }, SPLASH_SCREEN_TIME);
     }
-
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
