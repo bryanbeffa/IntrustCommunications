@@ -1,9 +1,7 @@
 package com.example.intrustcommunications;
 
-
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
@@ -24,6 +22,10 @@ import android.widget.TextView;
  */
 public class CareersFragment extends Fragment implements View.OnClickListener {
 
+    /**
+     * Constant that defines the 'Intrust Communications' email.
+     * Value mick.hull@intrustcommunications.ie
+     */
     private final String MAIL_TO = "mick.hull@intrustcommunications.ie";
 
     @Override
@@ -38,6 +40,11 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
         return careersView;
     }
 
+    /**
+     * Method that set the listeners to the elements.
+     *
+     * @param view that contains the elements.
+     */
     private void setOnClickListeners(View view) {
         //first job button
         TextView firstJobButton = (TextView) view.findViewById(R.id.firstJobButton);
@@ -78,8 +85,10 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
         TextView thirdButton = (TextView) getView().findViewById(R.id.thirdJobButton);
         TextView fourthButton = (TextView) getView().findViewById(R.id.fourthJobButton);
 
+        //get the view id
         int id = view.getId();
 
+        //check if the first job button is clicked
         if (id == R.id.firstJobButton) {
 
             //set view
@@ -88,7 +97,8 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
             //get first layout visibility
             int visible = firstJobLayout.getVisibility();
 
-            if(visible == View.GONE) {
+            //check if the first job is already visible
+            if (visible == View.GONE) {
 
                 //set layouts visibility
                 firstJobLayout.setVisibility(View.VISIBLE);
@@ -106,7 +116,9 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
                 //set button text
                 firstButton.setText("+");
             }
-        } else if (id == R.id.secondJobButton) {
+        }
+        //check if the second job button is clicked
+        else if (id == R.id.secondJobButton) {
 
             //set view
             scrollView.scrollTo(0, secondButton.getTop());
@@ -114,7 +126,8 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
             //get layout visibility
             int visible = secondJobLayout.getVisibility();
 
-            if(visible == View.GONE) {
+            //check if the second job is already visible
+            if (visible == View.GONE) {
 
                 //set layouts visibility
                 firstJobLayout.setVisibility(View.GONE);
@@ -132,7 +145,9 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
                 //set button text
                 secondButton.setText("+");
             }
-        } else if (id == R.id.thirdJobButton) {
+        }
+        //check if the third job button is clicked
+        else if (id == R.id.thirdJobButton) {
 
             //set view
             scrollView.scrollTo(0, thirdButton.getTop());
@@ -140,7 +155,8 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
             //get layout visibility
             int visible = thirdJobLayout.getVisibility();
 
-            if(visible == View.GONE) {
+            //check if the third job is already visible
+            if (visible == View.GONE) {
 
                 //set layouts visibility
                 firstJobLayout.setVisibility(View.GONE);
@@ -159,7 +175,9 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
                 thirdButton.setText("+");
 
             }
-        } else if (id == R.id.fourthJobButton) {
+        }
+        //check if the fourth job button is clicked
+        else if (id == R.id.fourthJobButton) {
 
             //set view
             scrollView.scrollTo(0, fourthButton.getTop());
@@ -167,7 +185,8 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
             //get layout visibility
             int visible = fourthJobLayout.getVisibility();
 
-            if(visible == View.GONE) {
+            //check if the fourth job is already visible
+            if (visible == View.GONE) {
 
                 //set layouts visibility
                 firstJobLayout.setVisibility(View.GONE);
@@ -185,20 +204,25 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
                 //set button text
                 fourthButton.setText("+");
             }
-        } else if (id == R.id.submitButton) {
-            //add logic with validator
-            EditText subjectEdit = (EditText) getView().findViewById(R.id.subjectEditText);
-            EditText messageEdit = (EditText) getView().findViewById(R.id.messageEditText);
+        }
+        //check if the submit button is clicked
+        else if (id == R.id.submitButton) {
 
+            //add logic with validator
+            EditText subjectEdit = getView().findViewById(R.id.subjectEditText);
+            EditText messageEdit = getView().findViewById(R.id.messageEditText);
+
+            //get the EditText texts
             String subject = subjectEdit.getText().toString();
             String message = messageEdit.getText().toString();
 
-            if(isEmailValid(subject, message)){
+            //change activity
+            if (isEmailValid(subject, message)) {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/rfc822");
-                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{MAIL_TO});
+                i.putExtra(Intent.EXTRA_EMAIL, new String[]{MAIL_TO});
                 i.putExtra(Intent.EXTRA_SUBJECT, subject);
-                i.putExtra(Intent.EXTRA_TEXT   , message);
+                i.putExtra(Intent.EXTRA_TEXT, message);
                 try {
                     startActivity(Intent.createChooser(i, "Send mail..."));
                 } catch (android.content.ActivityNotFoundException ex) {
@@ -214,13 +238,23 @@ public class CareersFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-    private boolean isEmailValid(String subject, String message){
+    /**
+     * Check if the email subject and message are valid.
+     * They cannot be null or empty.
+     *
+     * @param subject email subject.
+     * @param message email message.
+     * @return if the email is valid.
+     */
+    private boolean isEmailValid(String subject, String message) {
 
+        //removed the white spaces
         subject = subject.trim();
         message = message.trim();
 
-        if(subject != null && !subject.equals("")){
-            if(message != null && !message.equals("")){
+        //check if the email subject and message are not empty and not null.
+        if (subject != null && !subject.equals("")) {
+            if (message != null && !message.equals("")) {
                 return true;
             }
         }
