@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     /**
      * Constructor that requires the CurrentFragmentManager and the NavigationView objects.
      *
-     * @param cfManager      CurrentFragmentManager to set to cfManager attribute.
+     * @param cfManager CurrentFragmentManager to set to cfManager attribute.
      * @param navigationView NavigationView to set to navigationView attribute.
      */
     public HomeFragment(CurrentFragmentManager cfManager, NavigationView navigationView) {
@@ -50,9 +50,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         //set listeners
         setOnClickListeners(homeView);
-
-        //set the video source
-        //setVideoView(homeView);
 
         //set focus up
         ScrollView scrollView = homeView.findViewById(R.id.home_scroll_view);
