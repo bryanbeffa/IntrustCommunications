@@ -15,7 +15,8 @@ import com.google.android.material.navigation.NavigationView;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * @author Bryan Beffa
+ * @version 01.07.2019
  */
 public class ClientsFragment extends Fragment implements View.OnClickListener {
 

@@ -19,7 +19,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 /**
- * A simple {@link Fragment} subclass.
+ * @author Bryan Beffa
+ * @version 01.07.2019
  */
 public class CareersFragment extends Fragment implements View.OnClickListener {
 
