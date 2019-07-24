@@ -38,7 +38,7 @@ public class AboutUsFragment extends Fragment implements View.OnClickListener {
     /**
      * Constructor that requires the CurrentFragmentManager and the NavigationView objects.
      *
-     * @param cfManager      CurrentFragmentManager to set to cfManager attribute.
+     * @param cfManager CurrentFragmentManager to set to cfManager attribute.
      * @param navigationView NavigationView to set to navigationView attribute.
      */
     public AboutUsFragment(CurrentFragmentManager cfManager, NavigationView navigationView) {
