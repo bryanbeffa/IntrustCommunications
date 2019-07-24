@@ -38,7 +38,7 @@ public class CustomerRetentionFragment extends Fragment implements View.OnClickL
     /**
      * Constructor that requires the CurrentFragmentManager and the NavigationView objects.
      *
-     * @param cfManager      CurrentFragmentManager to set to cfManager attribute.
+     * @param cfManager CurrentFragmentManager to set to cfManager attribute.
      * @param navigationView NavigationView to set to navigationView attribute.
      */
     public CustomerRetentionFragment(CurrentFragmentManager cfManager, NavigationView navigationView) {
