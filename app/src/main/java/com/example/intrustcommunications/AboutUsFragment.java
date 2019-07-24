@@ -1,12 +1,15 @@
 package com.example.intrustcommunications;
 
 import android.os.Bundle;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
 import com.google.android.material.navigation.NavigationView;
 
 /**
@@ -35,7 +38,7 @@ public class AboutUsFragment extends Fragment implements View.OnClickListener {
     /**
      * Constructor that requires the CurrentFragmentManager and the NavigationView objects.
      *
-     * @param cfManager CurrentFragmentManager to set to cfManager attribute.
+     * @param cfManager      CurrentFragmentManager to set to cfManager attribute.
      * @param navigationView NavigationView to set to navigationView attribute.
      */
     public AboutUsFragment(CurrentFragmentManager cfManager, NavigationView navigationView) {
