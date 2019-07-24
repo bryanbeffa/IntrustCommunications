@@ -9,6 +9,10 @@ import androidx.appcompat.widget.Toolbar;
 import android.os.Handler;
 import android.view.View;
 
+/**
+ * @author Bryan Beffa
+ * @version 01.07.2019
+ */
 public class SplashScreen extends AppCompatActivity {
 
     /**
