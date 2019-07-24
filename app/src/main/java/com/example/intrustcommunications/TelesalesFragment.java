@@ -81,6 +81,7 @@ public class TelesalesFragment extends Fragment implements View.OnClickListener 
             //check if is the current fragment
             if (cfManager.getCurrentFragment() != CONTACT_US_ID) {
 
+                //replace the current fragment with the contact us fragment
                 FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
                 ft.replace(R.id.flMain, new ContactUsFragment(cfManager, navigationView));
