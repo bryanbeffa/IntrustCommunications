@@ -14,7 +14,7 @@ public class CurrentFragmentManager {
      * Set dashboard as default fragment.
      */
     public CurrentFragmentManager() {
-        currentFragment = 0;
+        currentFragment = 10;
     }
 
     /**

@@ -1,32 +1,91 @@
 package com.example.intrustcommunications;
 
-
 import android.os.Bundle;
+
 import androidx.core.view.GravityCompat;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+
 import android.view.MenuItem;
+
 import com.google.android.material.navigation.NavigationView;
+
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentTransaction;
+
 import android.view.Menu;
 
+/**
+ * @author Bryan Beffa
+ * @version 01.07.2019
+ */
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    /**
+     * Constant that defines the home id.
+     * Default value 0.
+     */
     private final int HOME_ID = 0;
+
+    /**
+     * Constant that defines the about us id.
+     * Default value 1.
+     */
     private final int ABOUT_US_ID = 1;
+
+    /**
+     * Constant that defines the services id.
+     * Default value 2.
+     */
     private final int SERVICES_ID = 2;
+
+    /**
+     * Constant that defines the clients id.
+     * Default value 3.
+     */
     private final int CLIENTS_ID = 3;
+
+    /**
+     * Constant that defines the careers id.
+     * Default value 4.
+     */
     private final int CAREERS_ID = 4;
+
+    /**
+     * Constant that defines the map id.
+     * Default value 5.
+     */
     private final int MAP_ID = 5;
+
+    /**
+     * Constant that defines the contact us id.
+     * Default value 6.
+     */
     private final int CONTACT_US_ID = 6;
+
+    /**
+     * Constant that defines the dashboard id.
+     * Default value 10.
+     */
     private final int DASH_ID = 10;
 
+    /**
+     * Constant that defines the 'Intrust Communications' email.
+     * Value mick.hull@intrustcommunications.ie
+     */
     private final String MAIL_TO = "mick.hull@intrustcommunications.ie";
 
+    /**
+     * Attribute that defines the CurrentFragmentManager object.
+     * Used to set the current item in the menu.
+     */
     private CurrentFragmentManager cfManager;
+
+    /**
+     * Attribute that defines the navigationView.
+     */
     private NavigationView navigationView;
 
     @Override
@@ -54,8 +113,6 @@ public class MainActivity extends AppCompatActivity
 
         //set selected item menu
         navigationView.setCheckedItem(R.id.nav_dashboard);
-
-        cfManager.setCurrentFragment(DASH_ID);
     }
 
     @Override
@@ -92,10 +149,11 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        //check if the nav home is selected
         if (id == R.id.nav_home) {
 
             //check if is the current fragment
-            if(cfManager.getCurrentFragment() != HOME_ID) {
+            if (cfManager.getCurrentFragment() != HOME_ID) {
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
@@ -108,10 +166,12 @@ public class MainActivity extends AppCompatActivity
 
             }
 
-        } else if (id == R.id.nav_dashboard) {
+        }
+        //check if the nav dashboard is selected
+        else if (id == R.id.nav_dashboard) {
 
             //check if is the current fragment
-            if(cfManager.getCurrentFragment() != DASH_ID) {
+            if (cfManager.getCurrentFragment() != DASH_ID) {
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
@@ -123,10 +183,12 @@ public class MainActivity extends AppCompatActivity
 
             }
 
-        } else if (id == R.id.nav_about_us) {
+        }
+        //check if the nav about us is selected
+        else if (id == R.id.nav_about_us) {
 
             //check if is the current fragment
-            if(cfManager.getCurrentFragment() != ABOUT_US_ID) {
+            if (cfManager.getCurrentFragment() != ABOUT_US_ID) {
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
@@ -138,10 +200,12 @@ public class MainActivity extends AppCompatActivity
 
             }
 
-        } else if (id == R.id.nav_services) {
+        }
+        //check if the nav services is selected
+        else if (id == R.id.nav_services) {
 
             //check if is the current fragment
-            if(cfManager.getCurrentFragment() != SERVICES_ID) {
+            if (cfManager.getCurrentFragment() != SERVICES_ID) {
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
@@ -153,10 +217,12 @@ public class MainActivity extends AppCompatActivity
 
             }
 
-        } else if (id == R.id.nav_clients) {
+        }
+        //check if the nav clients is selected
+        else if (id == R.id.nav_clients) {
 
             //check if is the current fragment
-            if(cfManager.getCurrentFragment() != CLIENTS_ID) {
+            if (cfManager.getCurrentFragment() != CLIENTS_ID) {
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
@@ -168,9 +234,11 @@ public class MainActivity extends AppCompatActivity
 
             }
 
-        } else if (id == R.id.nav_career) {
+        }
+        //check if the nav career is selected
+        else if (id == R.id.nav_career) {
             //check if is the current fragment
-            if(cfManager.getCurrentFragment() != CAREERS_ID) {
+            if (cfManager.getCurrentFragment() != CAREERS_ID) {
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
@@ -182,10 +250,12 @@ public class MainActivity extends AppCompatActivity
 
             }
 
-        } else if (id == R.id.nav_contact_us) {
+        }
+        //check if the nav contact us is selected
+        else if (id == R.id.nav_contact_us) {
 
             //check if is the current fragment
-            if(cfManager.getCurrentFragment() != CONTACT_US_ID) {
+            if (cfManager.getCurrentFragment() != CONTACT_US_ID) {
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
@@ -196,9 +266,11 @@ public class MainActivity extends AppCompatActivity
                 cfManager.setCurrentFragment(CONTACT_US_ID);
             }
 
-        } else if (id == R.id.nav_map) {
+        }
+        //check if the nav map is selected
+        else if (id == R.id.nav_map) {
             //check if is the current fragment
-            if(cfManager.getCurrentFragment() != MAP_ID) {
+            if (cfManager.getCurrentFragment() != MAP_ID) {
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.setCustomAnimations(R.anim.slide_in_right, 0);
