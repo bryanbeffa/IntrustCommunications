@@ -1,9 +1,5 @@
 package com.example.intrustcommunications;
 
-
-import android.graphics.Camera;
-import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -25,14 +20,26 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-
 /**
- * A simple {@link Fragment} subclass.
+ * @author Bryan Beffa
+ * @version 01.07.2019
  */
 public class MapFragment extends Fragment implements OnMapReadyCallback, View.OnClickListener {
 
+    /**
+     * Attribute that defines the GoogleMap object.
+     */
     private GoogleMap googleMap;
+
+    /**
+     * Attribute that defines the MapView object.
+     */
     private MapView mapView;
+
+    /**
+     * Attribute that defines the current type of the google map.
+     * Default value GoogleMap.MAP_TYPE_NORMAL (1).
+     */
     private int type = GoogleMap.MAP_TYPE_NORMAL;
 
     @Override
@@ -65,7 +72,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
 
         this.googleMap = googleMap;
         this.googleMap.setMapType(type);
-
         this.googleMap.addMarker(new MarkerOptions().position(new LatLng(51.89268467972574, -8.364436626434326))
                 .title("Intrust Communications"));
 
@@ -75,34 +81,41 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
         googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(intrust));
     }
 
+    /**
+     * Method that set the listeners to the elements.
+     *
+     * @param view that contains the elements.
+     */
     private void setOnClickListeners(View view) {
 
         //normal map button
-        Button normal = (Button) view.findViewById(R.id.normalMap);
+        Button normal = view.findViewById(R.id.normalMap);
         normal.setOnClickListener(this);
 
         //normal map button
-        Button satellite = (Button) view.findViewById(R.id.satelliteMap);
+        Button satellite = view.findViewById(R.id.satelliteMap);
         satellite.setOnClickListener(this);
 
         //terrain map button
-        Button terrain = (Button) view.findViewById(R.id.terrainMap);
+        Button terrain = view.findViewById(R.id.terrainMap);
         terrain.setOnClickListener(this);
 
         //hybrid map button
-        Button hybrid = (Button) view.findViewById(R.id.hybridMap);
+        Button hybrid = view.findViewById(R.id.hybridMap);
         hybrid.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
+
+        //get view id
         int id = view.getId();
 
         //get buttons
-        Button normal = (Button) getView().findViewById(R.id.normalMap);
-        Button satellite = (Button) getView().findViewById(R.id.satelliteMap);
-        Button terrain = (Button) getView().findViewById(R.id.terrainMap);
-        Button hybrid = (Button) getView().findViewById(R.id.hybridMap);
+        Button normal = getView().findViewById(R.id.normalMap);
+        Button satellite = getView().findViewById(R.id.satelliteMap);
+        Button terrain = getView().findViewById(R.id.terrainMap);
+        Button hybrid = getView().findViewById(R.id.hybridMap);
 
         //set colors
         normal.setBackgroundColor(getResources().getColor(R.color.details_color));
@@ -110,6 +123,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
         terrain.setBackgroundColor(getResources().getColor(R.color.details_color));
         hybrid.setBackgroundColor(getResources().getColor(R.color.details_color));
 
+        //check if the normal map button is clicked
         if (id == R.id.normalMap) {
 
             //set normal map
@@ -119,7 +133,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
             }
             normal.setBackgroundColor(getResources().getColor(R.color.button_selected));
 
-        } else if (id == R.id.satelliteMap) {
+        }
+        //check if the satellite map button is clicked
+        else if (id == R.id.satelliteMap) {
 
             //set satellite map
             if (type != GoogleMap.MAP_TYPE_SATELLITE) {
@@ -128,7 +144,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
             }
             satellite.setBackgroundColor(getResources().getColor(R.color.button_selected));
 
-        } else if (id == R.id.terrainMap) {
+        }
+        //check if the terrain map button is clicked
+        else if (id == R.id.terrainMap) {
 
             //set satellite map
             if (type != GoogleMap.MAP_TYPE_TERRAIN) {
@@ -137,7 +155,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
             }
             terrain.setBackgroundColor(getResources().getColor(R.color.button_selected));
 
-        } else if (id == R.id.hybridMap) {
+        }
+        //check if the hybrid map button is clicked
+        else if (id == R.id.hybridMap) {
 
             //set satellite map
             if (type != GoogleMap.MAP_TYPE_HYBRID) {
@@ -146,6 +166,5 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, View.On
             }
             hybrid.setBackgroundColor(getResources().getColor(R.color.button_selected));
         }
-
     }
 }
